@@ -1,0 +1,266 @@
+# 应急预案要素完整性 规则库
+#
+# 规则数据与代码分离：替换本文件即可切换规则集版本，无需改动 TypeScript。
+#
+# 条款引用纪律（由 shared/ruleset.ts 强制校验）：
+#   - 每条规则必须写全 document / number / clause / excerpt / kind / source，
+#     且 excerpt 必须是逐字摘录，不得改写。
+#   - kind: direct                       条款直接规定了所检查的要求
+#   - kind: derived-from-principle       条款未直接规定，仅能由原则性条款推论（severity 最多 warn）
+#   - kind: institutional-configuration 阈值出自本机构配置（severity 最多 info）
+#
+# ⚠️⚠️ 三条必须保留的勘误（本次核查的首要结论）：
+#   1. **「八要素」不是现行国家文件的表述**。它是**已被全部代替的 GB/T 29639—2013** 第 6 章
+#      （6.1~6.9）的民间归并俗称；在 gov.cn / mem.gov.cn / std.samr.gov.cn 用多组关键词均查无此提法。
+#      现行 **GB/T 29639-2020 第 6 章只有 5 个一级要素（6.1~6.5）**，且 2020 版前言明确
+#      「去掉编制目的」，第 6 章也无独立「信息公开」要素。**凡引用 2013 版条号者引用的是已废止标准。**
+#      → 因此本规则库一律按 **GB/T 29639-2020** 条号引用，并**不出现"八要素"字样**。
+#   2. **标准代号已变更**：应急管理部公告 2025 年第 1 号把 AQ/T 9011-2019 等 11 项标准代号
+#      由「AQ」调整为「YJ」，顺序号、年代号、内容不变 → 应写作 **YJ/T 9011-2019（原 AQ/T 9011-2019）**。
+#   3. **《生产安全事故应急预案管理办法》的准确版本**是「2016-06-03 国家安全生产监督管理总局令
+#      第88号公布，根据 2019-07-11 应急管理部令第2号修正」，不是"应急管理部令第2号"单独成文。
+
+plugin: dsh-emergency-plan
+version: "2026.1"
+
+rules:
+  - id: EP-001
+    title: 专项应急预案应包含 7.1~7.4 要素
+    severity: warn
+    basis:
+      document: 《生产经营单位生产安全事故应急预案编制导则》
+      number: GB/T 29639-2020
+      clause: '第7章（7.1~7.4）'
+      excerpt: 说明专项应急预案适用的范围，以及与综合应急预案的关系。
+      kind: direct
+      source: https://std.samr.gov.cn/gb/search/gbDetailed?id=B13990C15C4D5DDAE05397BE0A0A0D35
+    alsoBasis:
+      - document: 《生产安全事故应急预案管理办法》
+        number: 国家安全生产监督管理总局令第88号（应急管理部令第2号修正）
+        clause: 第十四条
+        excerpt: 专项应急预案应当规定应急指挥机构与职责、处置程序和措施等内容。
+        kind: direct
+        source: https://www.mem.gov.cn/gk/zfxxgkpt/fdzdgknr/202012/t20201207_374134.shtml
+    params:
+      elements:
+        - name: 适用范围
+          aliases: [适用范围, 编制依据, 预案适用范围]
+        - name: 应急组织机构及职责
+          aliases: [应急组织机构及职责, 应急组织机构与职责, 组织机构及职责, 应急指挥机构, 应急组织体系]
+        - name: 响应启动
+          aliases: [响应启动, 分级响应, 响应分级]
+        - name: 处置措施
+          aliases: [处置措施, 应急处置措施, 应急处置]
+    note: >-
+      ✅ 本条 excerpt 已逐字核对通过（标准 7.1），见 rules/evidence/clause-verification-gbt29639.md。
+      引文具体出处为 **7.1 适用范围**；clause 写「第 7 章」是章级引用（本条核对整章四个要素）。
+      7.1~7.4 为必备；第 7 章另有一条 7.5 应急保障，标准原文注为
+      「专项应急预案包括但不限于7.1~7.4的内容」，故 7.5 属**推荐项**，本规则库不列为必备。
+      本条 severity 为 warn：GB/T 29639 是**推荐性**国家标准（应急管理部答复亦确认），不是强制性要求。
+
+  - id: EP-002
+    title: 综合应急预案应包含第 6 章 6.1~6.5 要素
+    severity: warn
+    basis:
+      document: 《生产经营单位生产安全事故应急预案编制导则》
+      number: GB/T 29639-2020
+      clause: '第6章（6.1~6.5）'
+      excerpt: 明确应急组织形式（可用图示）及构成单位（部门）的应急处置职责。
+      kind: direct
+      source: https://std.samr.gov.cn/gb/search/gbDetailed?id=B13990C15C4D5DDAE05397BE0A0A0D35
+    alsoBasis:
+      - document: 《生产安全事故应急预案管理办法》
+        number: 国家安全生产监督管理总局令第88号（应急管理部令第2号修正）
+        clause: 第十三条
+        excerpt: 综合应急预案应当规定应急组织机构及其职责、应急预案体系、事故风险描述、预警及信息报告、应急响应、保障措施、应急预案管理等内容。
+        kind: direct
+        source: https://www.mem.gov.cn/gk/zfxxgkpt/fdzdgknr/202012/t20201207_374134.shtml
+    params:
+      elements:
+        - name: 总则
+          aliases: [总则, 适用范围, 编制目的]
+        - name: 应急组织机构及职责
+          aliases: [应急组织机构及职责, 应急组织机构与职责, 组织机构及职责, 应急组织体系]
+        - name: 应急响应
+          aliases: [应急响应, 预警及信息报告, 信息报告, 响应程序]
+        - name: 后期处置
+          aliases: [后期处置, 善后处置]
+        - name: 应急保障
+          aliases: [应急保障, 保障措施, 应急资源保障]
+    note: >-
+      ✅ 本条 excerpt 已逐字核对通过（标准 6.2 应急组织机构及职责），见 rules/evidence/clause-verification-gbt29639.md。
+      引文具体出处为 **6.2**；clause 写「第 6 章」是章级引用（本条核对整章五个要素）。
+      现行 2020 版第 6 章的一级要素是 **5 个**（6.1~6.5），不是 9 个也不是 8 个。
+      2020 版前言明确「修改了综合应急预案的要素内容，去掉编制目的」，故**「编制目的」不是 2020 版要素**，
+      本条只在总则的别名里兼容它，报出缺项时不会把它当作独立必备项。
+      第十三条并行的 7 项内容（含「应急预案体系」「事故风险描述」）可作为对照口径：
+      需要按办法口径核对时，复制本规则库并把 elements 换成那 7 项即可，不必改代码。
+      本条 severity 为 warn：GB/T 29639 是推荐性国家标准。
+
+  - id: EP-003
+    title: 现场处置方案应包含 8.1~8.4 要素
+    severity: warn
+    basis:
+      document: 《生产经营单位生产安全事故应急预案编制导则》
+      number: GB/T 29639-2020
+      clause: '第8章（8.1~8.4）'
+      excerpt: 简述事故风险评估的结果（可用列表的形式列在附件中）。
+      kind: direct
+      source: https://std.samr.gov.cn/gb/search/gbDetailed?id=B13990C15C4D5DDAE05397BE0A0A0D35
+    alsoBasis:
+      - document: 《生产安全事故应急预案管理办法》
+        number: 国家安全生产监督管理总局令第88号（应急管理部令第2号修正）
+        clause: 第十五条
+        excerpt: 现场处置方案应当规定应急工作职责、应急处置措施和注意事项等内容。
+        kind: direct
+        source: https://www.mem.gov.cn/gk/zfxxgkpt/fdzdgknr/202012/t20201207_374134.shtml
+    params:
+      elements:
+        - name: 事故风险描述
+          aliases: [事故风险描述, 事故风险分析, 风险描述]
+        - name: 应急工作职责
+          aliases: [应急工作职责, 应急职责, 工作职责]
+        - name: 应急处置
+          aliases: [应急处置, 应急处置措施, 处置程序, 处置措施]
+        - name: 注意事项
+          aliases: [注意事项, 安全注意事项]
+    note: >-
+      ✅ 本条 excerpt 已逐字核对通过（标准 8.1），见 rules/evidence/clause-verification-gbt29639.md。
+      ⚠️ 8.3 开头原文为「**包括但不限于**下列内容」，即 8.1~8.4 是**必备下限**而非封闭清单。
+      第 8 章 4 个要素为必备。办法第十五条只列 3 项（应急工作职责、应急处置措施、注意事项），
+      比标准少「事故风险描述」；两条依据已分别标注，不合并表述。
+
+  - id: EP-004
+    title: 材料应声明预案类型
+    severity: warn
+    basis:
+      document: 《生产经营单位生产安全事故应急预案编制导则》
+      number: GB/T 29639-2020
+      clause: '第5章 5.1'
+      excerpt: 生产经营单位应急预案分为综合应急预案、专项应急预案和现场处置方案。
+      kind: direct
+      source: https://std.samr.gov.cn/gb/search/gbDetailed?id=B13990C15C4D5DDAE05397BE0A0A0D35
+    params:
+      requirePlanType: true
+    note: >-
+      三类预案的要素清单不同，未声明类型就无法确定适用哪一份清单。
+      本条只核对是否声明，不判断该声明是否正确。
+
+  - id: EP-005
+    title: 要素顺序应与导则的要素清单一致
+    severity: info
+    basis:
+      document: 《生产经营单位生产安全事故应急预案编制导则》
+      number: GB/T 29639-2020
+      clause: 附录 C.3
+      excerpt: 应急预案应设置目次，目次中所列的内容及次序如下
+      kind: derived-from-principle
+      source: https://gf.cabr-fire.com/m/article-37840.htm
+    params:
+      checkOrder: true
+    note: >-
+      标准正文未直接规定"要素必须按此顺序排列"；本条依据附录 C.3 对**目次次序**的要求推论，
+      且附录 C 是**资料性附录**（非规范性要求），故封顶 info。
+      注意：材料必须提供 page 或 line 才能核对顺序，否则本条进 skipped。
+
+  - id: EP-006
+    title: 章节应带页码以便要素定位
+    severity: info
+    basis:
+      document: 《生产经营单位生产安全事故应急预案编制导则》
+      number: GB/T 29639-2020
+      clause: 附录 C.3
+      excerpt: 应急预案应设置目次，目次中所列的内容及次序如下
+      kind: derived-from-principle
+      source: https://gf.cabr-fire.com/m/article-37840.htm
+    params:
+      minPageRatio: 0.5
+    note: >-
+      ⚠️ **未核实到任何国家层面文件要求应急预案标注页码**。附录 C.3 只规定「目次」的内容与次序，
+      正文中不出现「页码」二字，且附录 C 是资料性附录。
+      因此页码在本插件中只作**辅助定位信息**，本条为 info 级，**不得表述为"不符合某条规定"**。
+      未提供页码时报告按行号定位。
+
+  - id: EP-007
+    title: 同一要素不应在预案中重复出现
+    severity: warn
+    basis:
+      document: 《生产经营单位生产安全事故应急预案编制导则》
+      number: GB/T 29639-2020
+      clause: 附录 C.3
+      excerpt: 应急预案应设置目次，目次中所列的内容及次序如下
+      kind: derived-from-principle
+      source: https://gf.cabr-fire.com/m/article-37840.htm
+    params: {}
+    note: >-
+      未找到"同一要素不得重复"的明文条款；本条依据目次次序的唯一性推论，故封顶 warn。
+      实际用途是发现"合并多份预案时产生的重复章节"，需人工确认。
+
+  - id: EP-008
+    title: 应按本机构配置核对版本与修订标识
+    severity: info
+    basis:
+      document: 《生产经营单位生产安全事故应急预案编制导则》
+      number: GB/T 29639-2020
+      clause: 附录 C.1
+      excerpt: 应急预案封面主要包括应急预案编号、应急预案版本号、生产经营单位名称、应急预案名称及颁布日期。
+      kind: institutional-configuration
+      source: https://gf.cabr-fire.com/m/article-37840.htm
+    params:
+      versionPatterns: []
+    note: >-
+      附录 C.1 对封面提出「版本号」等栏目要求，属**资料性附录**；**未核实到"修订记录页"的国家明文**。
+      versionPatterns 留空表示未配置：本条不替使用方规定版本标识应写成什么样。
+      配置后本条只核对章节标题里是否出现配置的标识词，不判断内容是否合规。
+
+  - id: EP-009
+    title: 预案附件应包含规定的附件信息
+    severity: info
+    basis:
+      document: 《生产安全事故应急预案管理办法》
+      number: 国家安全生产监督管理总局令第88号（应急管理部令第2号修正）
+      clause: 第十六条
+      excerpt: 生产经营单位应急预案应当包括向上级应急管理机构报告的内容、应急组织机构和人员的联系方式、应急物资储备清单等附件信息。
+      kind: direct
+      source: https://www.mem.gov.cn/gk/zfxxgkpt/fdzdgknr/202012/t20201207_374134.shtml
+    alsoBasis:
+      - document: 《生产经营单位生产安全事故应急预案编制导则》
+        number: GB/T 29639-2020
+        clause: '第9章（9.1~9.8）'
+        excerpt: 9.1 生产经营单位概况；9.2 风险评估的结果；9.3 预案体系与衔接；9.4 应急物资装备的名录或清单；9.5 有关应急部门、机构或人员的联系方式；9.6 格式化文本；9.7 关键的路线、标识和图纸；9.8 有关协议或者备忘录。
+        kind: direct
+        source: https://gf.cabr-fire.com/m/article-37836.htm
+    params:
+      requireAttachments: false
+      elements:
+        - name: 生产经营单位概况
+          aliases: [生产经营单位概况, 单位概况, 企业概况]
+        - name: 风险评估的结果
+          aliases: [风险评估的结果, 风险评估结果, 事故风险评估]
+        - name: 预案体系与衔接
+          aliases: [预案体系与衔接, 预案体系, 体系与衔接]
+        - name: 应急物资装备的名录或清单
+          aliases: [应急物资装备的名录或清单, 应急物资装备清单, 物资装备清单, 应急物资清单]
+        - name: 有关应急部门、机构或人员的联系方式
+          aliases: [有关应急部门、机构或人员的联系方式, 联系方式, 应急通讯录, 联络人员]
+        - name: 格式化文本
+          aliases: [格式化文本, 格式文本]
+        - name: 关键的路线、标识和图纸
+          aliases: [关键的路线、标识和图纸, 路线标识和图纸, 疏散路线图, 平面布置图]
+        - name: 有关协议或者备忘录
+          aliases: [有关协议或者备忘录, 协议或者备忘录, 应急协议, 备忘录]
+    note: >-
+      requireAttachments 默认 false，本条默认不执行并进 skipped：
+      材料往往只提供正文、不含附件，未配置时不应把"没给附件"报成缺项。
+      需要核对时请配置为 true，并把附件项以章节形式一并提供。
+      依据为办法第十六条（正文条款，非资料性附录）；第 9 章 9.1~9.8 的清单作为对照口径。
+      ⚠️ **本条的 alsoBasis 已于 2026-10-07 更正**（见 rules/evidence/clause-verification-emergency-measures.md）：
+      原先该 alsoBasis 把**办法第十六条**的措辞（「应当包括向上级应急管理机构报告的内容……」）
+      挂在 **GB/T 29639 第 9 章**名下，并附了一个与该标准无关的 mem.gov.cn 链接。
+      经逐字核对：**GB/T 29639 第 9 章的内容是八个附件条目名**
+      （9.1 生产经营单位概况 … 9.8 有关协议或者备忘录），**不含办法第十六条那句话**。
+      ⇒ 已把 alsoBasis 的 excerpt 换成**第 9 章真实的八个条目名**，并把 source 换成该标准的规范页。
+      ✅ 办法第十六条的引文本身**逐字核对通过且条号正确**（主 basis 未改）。
+      ✅ 另有一条可援引的明文：**办法第八条（七）**「应急预案基本要素齐全、完整，**应急预案附件提供的信息准确**」。
+
+disabled: []

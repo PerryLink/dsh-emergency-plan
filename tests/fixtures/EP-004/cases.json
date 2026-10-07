@@ -1,0 +1,22 @@
+{
+  "ruleId": "EP-004",
+  "purpose": "材料应声明预案类型，否则无法确定适用哪一份要素清单",
+  "pairs": [
+    {
+      "name": "expected-state",
+      "material": "EP-004-compliant.json",
+      "expect": {
+        "ruleId": "EP-004",
+        "count": 0
+      }
+    },
+    {
+      "name": "difference-present",
+      "material": "EP-004-unsafe.json",
+      "expect": {
+        "ruleId": "EP-004",
+        "count": 1
+      }
+    }
+  ]
+}

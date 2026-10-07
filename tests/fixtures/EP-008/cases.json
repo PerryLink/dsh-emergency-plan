@@ -1,0 +1,30 @@
+{
+  "ruleId": "EP-008",
+  "purpose": "按本机构配置核对版本标识（附录 C.1 为资料性附录，无修订记录页的国家明文）",
+  "configure": {
+    "EP-008": {
+      "versionPatterns": [
+        "版本号",
+        "版本"
+      ]
+    }
+  },
+  "pairs": [
+    {
+      "name": "expected-state",
+      "material": "EP-008-compliant.json",
+      "expect": {
+        "ruleId": "EP-008",
+        "count": 0
+      }
+    },
+    {
+      "name": "difference-present",
+      "material": "EP-008-unsafe.json",
+      "expect": {
+        "ruleId": "EP-008",
+        "count": 1
+      }
+    }
+  ]
+}

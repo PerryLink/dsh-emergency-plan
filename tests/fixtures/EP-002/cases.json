@@ -1,0 +1,22 @@
+{
+  "ruleId": "EP-002",
+  "purpose": "综合应急预案应包含 GB/T 29639-2020 第6章 6.1~6.5 五个一级要素（不是已废止 2013 版的九项）",
+  "pairs": [
+    {
+      "name": "expected-state",
+      "material": "EP-002-compliant.json",
+      "expect": {
+        "ruleId": "EP-002",
+        "count": 0
+      }
+    },
+    {
+      "name": "difference-present",
+      "material": "EP-002-unsafe.json",
+      "expect": {
+        "ruleId": "EP-002",
+        "count": 1
+      }
+    }
+  ]
+}

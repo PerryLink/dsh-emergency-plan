@@ -1,0 +1,22 @@
+{
+  "ruleId": "EP-007",
+  "purpose": "同一要素不应在预案中重复出现（常见于合并多份预案时）",
+  "pairs": [
+    {
+      "name": "expected-state",
+      "material": "EP-007-compliant.json",
+      "expect": {
+        "ruleId": "EP-007",
+        "count": 0
+      }
+    },
+    {
+      "name": "difference-present",
+      "material": "EP-007-unsafe.json",
+      "expect": {
+        "ruleId": "EP-007",
+        "count": 1
+      }
+    }
+  ]
+}

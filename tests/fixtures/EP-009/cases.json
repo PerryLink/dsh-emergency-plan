@@ -1,0 +1,44 @@
+{
+  "ruleId": "EP-009",
+  "purpose": "预案附件应包含规定的附件信息（依据办法第十六条，默认关闭）",
+  "configure": {
+    "EP-009": {
+      "requireAttachments": true,
+      "elements": [
+        {
+          "name": "生产经营单位概况",
+          "aliases": [
+            "生产经营单位概况",
+            "单位概况"
+          ]
+        },
+        {
+          "name": "应急物资装备的名录或清单",
+          "aliases": [
+            "应急物资装备的名录或清单",
+            "应急物资装备清单",
+            "应急物资清单"
+          ]
+        }
+      ]
+    }
+  },
+  "pairs": [
+    {
+      "name": "expected-state",
+      "material": "EP-009-compliant.json",
+      "expect": {
+        "ruleId": "EP-009",
+        "count": 0
+      }
+    },
+    {
+      "name": "difference-present",
+      "material": "EP-009-unsafe.json",
+      "expect": {
+        "ruleId": "EP-009",
+        "count": 1
+      }
+    }
+  ]
+}

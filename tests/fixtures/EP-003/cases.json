@@ -1,0 +1,22 @@
+{
+  "ruleId": "EP-003",
+  "purpose": "现场处置方案应包含 GB/T 29639-2020 第8章 8.1~8.4 要素",
+  "pairs": [
+    {
+      "name": "expected-state",
+      "material": "EP-003-compliant.json",
+      "expect": {
+        "ruleId": "EP-003",
+        "count": 0
+      }
+    },
+    {
+      "name": "difference-present",
+      "material": "EP-003-unsafe.json",
+      "expect": {
+        "ruleId": "EP-003",
+        "count": 1
+      }
+    }
+  ]
+}

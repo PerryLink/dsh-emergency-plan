@@ -1,0 +1,22 @@
+{
+  "ruleId": "EP-006",
+  "purpose": "章节应带页码以便定位（国家层面无页码强制要求，本条为辅助定位提示）",
+  "pairs": [
+    {
+      "name": "expected-state",
+      "material": "EP-006-compliant.json",
+      "expect": {
+        "ruleId": "EP-006",
+        "count": 0
+      }
+    },
+    {
+      "name": "difference-present",
+      "material": "EP-006-unsafe.json",
+      "expect": {
+        "ruleId": "EP-006",
+        "count": 1
+      }
+    }
+  ]
+}

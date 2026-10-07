@@ -1,0 +1,22 @@
+{
+  "ruleId": "EP-005",
+  "purpose": "要素顺序应与导则的要素清单一致（依据资料性附录 C.3 的目次次序要求推论）",
+  "pairs": [
+    {
+      "name": "expected-state",
+      "material": "EP-005-compliant.json",
+      "expect": {
+        "ruleId": "EP-005",
+        "count": 0
+      }
+    },
+    {
+      "name": "difference-present",
+      "material": "EP-005-unsafe.json",
+      "expect": {
+        "ruleId": "EP-005",
+        "count": 1
+      }
+    }
+  ]
+}

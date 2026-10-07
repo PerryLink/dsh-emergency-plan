@@ -1,0 +1,22 @@
+{
+  "ruleId": "EP-001",
+  "purpose": "专项应急预案应包含 GB/T 29639-2020 第7章 7.1~7.4 要素（7.5 应急保障为推荐项）",
+  "pairs": [
+    {
+      "name": "expected-state",
+      "material": "EP-001-compliant.json",
+      "expect": {
+        "ruleId": "EP-001",
+        "count": 0
+      }
+    },
+    {
+      "name": "difference-present",
+      "material": "EP-001-unsafe.json",
+      "expect": {
+        "ruleId": "EP-001",
+        "count": 1
+      }
+    }
+  ]
+}
