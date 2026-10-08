@@ -1,4 +1,24 @@
-# dsh-emergency-plan
+# dsh-emergency-plan — Completude dos elementos do plano de emergência e localização por página ao nível da cláusula
+
+`dsh-emergency-plan` lê um plano de emergência —a sua árvore de secções, títulos, números de página e texto— e verifica a completude dos elementos desse plano face ao guia de redação: que elementos estão presentes, quais faltam, quais aparecem apenas como título sem texto por baixo e onde se situa cada um, por página quando o material traz números de página e por linha caso contrário. Aplica um pacote de regras versionado ao tipo de plano que o material declara, e cada achado indica a cláusula de onde vem e se essa cláusula é um requisito direto, um princípio ou uma configuração local; uma verificação que não pôde correr di-lo em `skipped` em vez de passar em silêncio.
+
+## O que ele responde
+
+| Você pergunta | O que ele responde |
+|---|---|
+| O material não diz qual dos três tipos de plano é. O que acontece? | `EP-004` reporta que o material não declara `planType`, porque cada um dos três tipos tem a sua própria lista de elementos. Verifica apenas que a declaração existe, não que esteja correta; enquanto faltar, `EP-002` e `EP-003` indicam em `skipped` que lista de elementos assumiram. |
+| Um 综合应急预案 não tem o capítulo 后期处置. Isso é reportado? É também obrigatório um ponto 编制目的? | `EP-002` procura um a um os cinco elementos de primeiro nível do capítulo 6 do guia em vigor (6.1~6.5) e reporta cada um que não encontra, portanto um 后期处置 em falta é reportado. 编制目的 não é um desses cinco: a edição em vigor removeu-o e o pacote só o aceita como alias de 总则. O achado é `warn`, porque o guia de redação é uma norma nacional recomendada, não obrigatória. |
+| Que elementos são obrigatórios num 专项应急预案 e num 现场处置方案? | `EP-001` exige os elementos 7.1~7.4 do 专项应急预案 e `EP-003` os 8.1~8.4 do 现场处置方案, e reporta cada elemento que não encontra na árvore de secções; se o título existe mas não há texto por baixo, é reportado como vazio. Ambas as listas são mínimos, não listas fechadas —a cláusula do 现场处置 diz 包括但不限于—, pelo que um elemento a mais não gera achado. Em `EP-001` o elemento 7.5 应急保障 continua a ser recomendado; em `EP-003` a lista mais curta da 《生产安全事故应急预案管理办法》 é citada como base separada e nunca é fundida com a do guia. |
+| Depois de fundir dois planos, o mesmo título de elemento aparece duas vezes. Isso é detetado? | `EP-007` reporta um elemento exigido que aparece mais de uma vez e enumera todos os títulos que com ele coincidiram. Nenhuma cláusula o diz expressamente —o pacote deduz-o da unicidade da ordem do 目次—, por isso fica limitado a `warn`, e o pacote pede confirmação humana, porque a duplicação costuma vir da fusão de vários planos. Compara a lista de elementos que aplica, não todos os títulos repetidos do material. |
+| O relatório mostra `EP-005` como `skipped`. Porquê? Numerar as páginas do plano é obrigatório? | `EP-005` só consegue comparar a ordem dos elementos quando pelo menos dois deles têm `page` ou `line`; caso contrário, di-lo em `skipped` em vez de presumir uma ordem. `EP-006` trata os números de página como informação de localização: fica em silêncio quando a proporção de secções com página atinge `minPageRatio` (0,5 por omissão) e, abaixo dessa proporção, emite apenas um aviso de nível `info`. Ambas ficam limitadas a `info` —a expectativa de ordem é deduzida de um anexo informativo, não do corpo da norma— e um plano sem páginas nunca é reportado como incumprimento de uma cláusula: o relatório localiza por número de linha. |
+| Porque é que `EP-008` e `EP-009` aparecem em `skipped` em vez de passar? | Ambas esperam configuração. `EP-009` só corre com `requireAttachments` em `true`, porque quem chama costuma entregar o corpo do plano sem os anexos e dar os anexos ausentes como faltas seria enganador; ativada, procura os oito elementos de anexo e reporta os que não encontra. `EP-008` só corre se houver `versionPatterns` configurados: com a lista vazia não dita como deve ser escrito o identificador de versão e, uma vez configurada, verifica apenas se o marcador aparece em algum título de secção, nunca se o conteúdo da revisão está correto. |
+
+## Normas que segue
+
+| Documento | Número | Regras que o citam |
+|---|---|---|
+| 《生产经营单位生产安全事故应急预案编制导则》 | GB/T 29639-2020 | EP-001, EP-002, EP-003, EP-004, EP-005, EP-006, EP-007, EP-008, EP-009 |
+| 《生产安全事故应急预案管理办法》 | 国家安全生产监督管理总局令第88号（应急管理部令第2号修正） | EP-001, EP-002, EP-003, EP-009 |
 
 **Boundary:** this plugin checks an **emergency plan's element completeness** against the drafting
 guideline and locates each element by page, reporting literal differences against cited clauses. It is

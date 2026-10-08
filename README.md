@@ -1,4 +1,24 @@
-# dsh-emergency-plan
+# dsh-emergency-plan — Emergency plan element completeness and clause-level page locating
+
+`dsh-emergency-plan` reads one emergency plan — its section tree, headings, page numbers and body text — and checks that plan's element completeness against the drafting guideline: which elements are present, which are absent, which appear only as a heading with no text under them, and where each one sits, by page where the material carries page numbers and by line otherwise. It applies a versioned rule pack to the plan type the material declares, and every finding names the clause it came from and states whether that clause is a direct requirement, a principle or a local configuration; a check that could not run says so in `skipped` instead of passing silently.
+
+## What it answers
+
+| You ask | What it answers |
+|---|---|
+| Our material never says which of the three plan types it is. What happens? | `EP-004` reports the material for not declaring `planType`, because each of the three types carries a different element list. It checks only that the declaration is there, not that it is the right one; while it is missing, `EP-002` and `EP-003` state in `skipped` which element list they assumed. |
+| A 综合应急预案 has no 后期处置 chapter. Is that reported — and does it also need a 编制目的 section? | `EP-002` looks for the five first-level elements of the current guideline's chapter 6 (6.1~6.5) one by one and reports each one it cannot find, so a missing 后期处置 is reported. 编制目的 is not one of the five: the current edition removed it, and the pack accepts it only as an alias of 总则. The finding is `warn`, because the drafting guideline is a recommended national standard, not a mandatory one. |
+| Which elements are mandatory in a 专项应急预案 and in a 现场处置方案? | `EP-001` requires the 专项应急预案's 7.1~7.4 elements and `EP-003` the 现场处置方案's 8.1~8.4, each reporting the elements it cannot find in the section tree; a heading that exists with no text under it is reported as empty. Both lists are floors, not closed lists — the 现场处置 clause reads 包括但不限于 — so an extra element is not a finding. In `EP-001` the 7.5 应急保障 element stays recommended; in `EP-003` the shorter list in the 《生产安全事故应急预案管理办法》 is kept as a separate basis and never merged with the guideline's. |
+| We merged two plans and now the same element heading appears twice. Is that caught? | `EP-007` reports a required element that appears more than once and lists every heading that matched it. No clause states this outright — the pack derives it from the uniqueness of the 目次 order — so it is capped at `warn`, and the pack asks for human confirmation, because a duplicate usually comes from merging several plans. It compares the element list it applies, not every repeated heading in the material. |
+| The report shows `EP-005` as `skipped`. Why — and must a plan carry page numbers? | `EP-005` can compare element order only when at least two elements carry a `page` or a `line`; without them it says so in `skipped` rather than assuming an order. `EP-006` treats page numbers as locating information: it stays quiet once the share of sections carrying a page reaches `minPageRatio` (0.5 by default) and, below that share, only raises an `info` finding. Both are capped at `info` — the order expectation is drawn from an informative appendix, not the standard's body — and a plan without page numbers is never reported as a breach of a clause: the report locates by line number instead. |
+| Why do `EP-008` and `EP-009` appear under `skipped` instead of passing? | Both wait for configuration. `EP-009` runs only when `requireAttachments` is set to `true`, because a caller usually supplies the plan body without its attachments and reporting those as missing would be misleading; enabled, it looks for the eight attachment items and reports the ones it cannot find. `EP-008` runs only when `versionPatterns` are configured: with the list empty it does not dictate what a version marker should look like, and once configured it checks only whether the configured marker appears in a section heading — never whether the revision content is correct. |
+
+## Standards it follows
+
+| Document | Number | Cited by rules |
+|---|---|---|
+| 《生产经营单位生产安全事故应急预案编制导则》 | GB/T 29639-2020 | EP-001, EP-002, EP-003, EP-004, EP-005, EP-006, EP-007, EP-008, EP-009 |
+| 《生产安全事故应急预案管理办法》 | 国家安全生产监督管理总局令第88号（应急管理部令第2号修正） | EP-001, EP-002, EP-003, EP-009 |
 
 **Boundary:** this plugin checks an **emergency plan's element completeness** against the drafting
 guideline and locates each element by page, reporting literal differences against cited clauses. It is
