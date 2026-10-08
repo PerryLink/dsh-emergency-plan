@@ -43,8 +43,7 @@ is **国家安全生产监督管理总局令第88号 (2016), amended by 应急�
 ## Install
 
 ```sh
-pnpm pack
-dsh plugin --profile <name> add ./*.tgz
+dsh plugin --profile <name> add dsh-emergency-plan
 dsh --profile <name> --dump-config | grep 'dsh-emergency-plan'
 ```
 

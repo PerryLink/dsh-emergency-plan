@@ -62,8 +62,7 @@ element list is a `warn`, not an `error`.
 ## Install
 
 ```sh
-pnpm pack
-dsh plugin --profile <name> add ./dsh-emergency-plan-0.1.0.tgz
+dsh plugin --profile <name> add dsh-emergency-plan
 dsh --profile <name> --dump-config | grep 'dsh-emergency-plan'
 ```
 
