@@ -1,6 +1,6 @@
 {
   "name": "dsh-emergency-plan",
-  "version": "0.2.2",
+  "version": "0.2.3",
   "description": "应急预案要素齐备性与条款级页码定位（依据 GB/T 29639-2020 等公开文件，仅提示差异，不作出定性结论）",
   "type": "module",
   "main": "lib/index.mjs",
