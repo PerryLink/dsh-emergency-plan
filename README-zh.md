@@ -1,6 +1,14 @@
 # dsh-emergency-plan — 应急预案要素齐备性与条款级页码定位
 
+[![DSH Market](https://raw.githubusercontent.com/2BingLing/dsh-market/master/assets/readme/badge-listed-en.svg)](https://dsh.market/)
+
 `dsh-emergency-plan` 读取一份应急预案——它的章节树、标题、页码与正文——核对这份预案的要素齐备性是否符合编制导则：哪些要素已出现、哪些缺失、哪些只有标题而标题之下没有正文，以及各要素在材料里的位置，材料带页码时按页定位、否则按行号定位。它按材料声明的预案类型套用版本化规则库，每条差异都写出所依据的条款，并标明该条款是直接规定、原则性推论还是本机构配置；无法执行的检查会在 `skipped` 中说明，而不是静默通过。
+
+## 实际输出长什么样
+
+![Terminal demo of dsh-emergency-plan: real output over its EP-004 fixture](https://raw.githubusercontent.com/PerryLink/dsh-emergency-plan/main/docs/assets/dsh-emergency-plan-demo.png)
+
+本插件对自己 `EP-004` 测试夹具的**真实输出**，不是示意图。规则库不伪造引文，因此每条发现都会同时写明所引条款，以及该条款原文本次未取得。
 
 ## 它回答什么问题
 

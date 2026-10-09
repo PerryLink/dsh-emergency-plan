@@ -1,6 +1,14 @@
 # dsh-emergency-plan — Emergency plan element completeness and clause-level page locating
 
+[![DSH Market](https://raw.githubusercontent.com/2BingLing/dsh-market/master/assets/readme/badge-listed-en.svg)](https://dsh.market/)
+
 `dsh-emergency-plan` reads one emergency plan — its section tree, headings, page numbers and body text — and checks that plan's element completeness against the drafting guideline: which elements are present, which are absent, which appear only as a heading with no text under them, and where each one sits, by page where the material carries page numbers and by line otherwise. It applies a versioned rule pack to the plan type the material declares, and every finding names the clause it came from and states whether that clause is a direct requirement, a principle or a local configuration; a check that could not run says so in `skipped` instead of passing silently.
+
+## What it looks like
+
+![Terminal demo of dsh-emergency-plan: real output over its EP-004 fixture](https://raw.githubusercontent.com/PerryLink/dsh-emergency-plan/main/docs/assets/dsh-emergency-plan-demo.png)
+
+Real output from this plugin over its own `EP-004` test fixture — not a mock-up. The rule pack ships no invented quotations, so a finding names both the clause it applied and the fact that the clause text was not obtained.
 
 ## What it answers
 

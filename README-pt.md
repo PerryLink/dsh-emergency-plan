@@ -1,6 +1,14 @@
 # dsh-emergency-plan — Completude dos elementos do plano de emergência e localização por página ao nível da cláusula
 
+[![DSH Market](https://raw.githubusercontent.com/2BingLing/dsh-market/master/assets/readme/badge-listed-en.svg)](https://dsh.market/)
+
 `dsh-emergency-plan` lê um plano de emergência —a sua árvore de secções, títulos, números de página e texto— e verifica a completude dos elementos desse plano face ao guia de redação: que elementos estão presentes, quais faltam, quais aparecem apenas como título sem texto por baixo e onde se situa cada um, por página quando o material traz números de página e por linha caso contrário. Aplica um pacote de regras versionado ao tipo de plano que o material declara, e cada achado indica a cláusula de onde vem e se essa cláusula é um requisito direto, um princípio ou uma configuração local; uma verificação que não pôde correr di-lo em `skipped` em vez de passar em silêncio.
+
+## Como é a saída
+
+![Terminal demo of dsh-emergency-plan: real output over its EP-004 fixture](https://raw.githubusercontent.com/PerryLink/dsh-emergency-plan/main/docs/assets/dsh-emergency-plan-demo.png)
+
+Saída real deste plugin sobre o seu próprio fixture de teste `EP-004` — não é uma simulação. O pacote de regras não inventa citações, por isso cada achado nomeia a cláusula aplicada e avisa que o seu texto não foi obtido.
 
 ## O que ele responde
 
