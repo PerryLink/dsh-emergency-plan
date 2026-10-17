@@ -1,5 +1,11 @@
 # Changelog
 
+## [0.2.6] - 2026-10-18
+
+### Fixed
+
+- **`check:citations` now checks every `excerpt`, including `alsoBasis`.** The gate read only the first excerpt per rule and reported “every quotation is accounted for” while 4 `alsoBasis` quotations were never checked. It now reports 13 segments instead of 9.
+
 ## [0.2.5] - 2026-10-18
 
 ### Changed
