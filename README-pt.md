@@ -4,6 +4,13 @@
 
 `dsh-emergency-plan` lê um plano de emergência —a sua árvore de secções, títulos, números de página e texto— e verifica a completude dos elementos desse plano face ao guia de redação: que elementos estão presentes, quais faltam, quais aparecem apenas como título sem texto por baixo e onde se situa cada um, por página quando o material traz números de página e por linha caso contrário. Aplica um pacote de regras versionado ao tipo de plano que o material declara, e cada achado indica a cláusula de onde vem e se essa cláusula é um requisito direto, um princípio ou uma configuração local; uma verificação que não pôde correr di-lo em `skipped` em vez de passar em silêncio.
 
+## Install
+
+```sh
+dsh plugin --profile <name> add dsh-emergency-plan
+dsh --profile <name> --dump-config | grep 'dsh-emergency-plan'
+```
+
 ## Como é a saída
 
 ![Terminal demo of dsh-emergency-plan: real output over its EP-004 fixture](https://raw.githubusercontent.com/PerryLink/dsh-emergency-plan/main/docs/assets/dsh-emergency-plan-hero.png)
@@ -69,13 +76,6 @@ is **国家安全生产监督管理总局令第88号 (2016), amended by 应急�
 ## What it does
 
 A tabela de regras, os campos e o comportamento detalhado estão em [README.md](README.md#what-it-does) (versão principal em inglês). O plugin apenas lista divergências literais frente às cláusulas citadas e indica em `skipped` cada verificação que não pôde ser executada.
-
-## Install
-
-```sh
-dsh plugin --profile <name> add dsh-emergency-plan
-dsh --profile <name> --dump-config | grep 'dsh-emergency-plan'
-```
 
 ## Configuration
 

@@ -4,6 +4,13 @@
 
 `dsh-emergency-plan` 读取一份应急预案——它的章节树、标题、页码与正文——核对这份预案的要素齐备性是否符合编制导则：哪些要素已出现、哪些缺失、哪些只有标题而标题之下没有正文，以及各要素在材料里的位置，材料带页码时按页定位、否则按行号定位。它按材料声明的预案类型套用版本化规则库，每条差异都写出所依据的条款，并标明该条款是直接规定、原则性推论还是本机构配置；无法执行的检查会在 `skipped` 中说明，而不是静默通过。
 
+## Install
+
+```sh
+dsh plugin --profile <name> add dsh-emergency-plan
+dsh --profile <name> --dump-config | grep 'dsh-emergency-plan'
+```
+
 ## 实际输出长什么样
 
 ![Terminal demo of dsh-emergency-plan: real output over its EP-004 fixture](https://raw.githubusercontent.com/PerryLink/dsh-emergency-plan/main/docs/assets/dsh-emergency-plan-hero.png)
@@ -69,13 +76,6 @@ is **国家安全生产监督管理总局令第88号 (2016), amended by 应急�
 ## What it does
 
 规则表、字段说明与行为细节见 [README.md](README.md#what-it-does)（英文主版本）。本插件只列出材料与所引条款之间的字面差异，并对无法执行的检查在 `skipped` 中逐项说明。
-
-## Install
-
-```sh
-dsh plugin --profile <name> add dsh-emergency-plan
-dsh --profile <name> --dump-config | grep 'dsh-emergency-plan'
-```
 
 ## Configuration
 

@@ -4,6 +4,13 @@
 
 `dsh-emergency-plan` reads one emergency plan — its section tree, headings, page numbers and body text — and checks that plan's element completeness against the drafting guideline: which elements are present, which are absent, which appear only as a heading with no text under them, and where each one sits, by page where the material carries page numbers and by line otherwise. It applies a versioned rule pack to the plan type the material declares, and every finding names the clause it came from and states whether that clause is a direct requirement, a principle or a local configuration; a check that could not run says so in `skipped` instead of passing silently.
 
+## Install
+
+```sh
+dsh plugin --profile <name> add dsh-emergency-plan
+dsh --profile <name> --dump-config | grep 'dsh-emergency-plan'
+```
+
 ## What it looks like
 
 ![Terminal demo of dsh-emergency-plan: real output over its EP-004 fixture](https://raw.githubusercontent.com/PerryLink/dsh-emergency-plan/main/docs/assets/dsh-emergency-plan-hero.png)
@@ -88,13 +95,6 @@ configuration.
 The element lists live in the rule pack, not in the code, because they change with the guideline's
 version. Severities reflect that GB/T 29639 is a **recommended** national standard: an incomplete
 element list is a `warn`, not an `error`.
-
-## Install
-
-```sh
-dsh plugin --profile <name> add dsh-emergency-plan
-dsh --profile <name> --dump-config | grep 'dsh-emergency-plan'
-```
 
 ## Configuration
 

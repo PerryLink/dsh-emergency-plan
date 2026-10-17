@@ -4,6 +4,13 @@
 
 `dsh-emergency-plan` एक आपातकालीन योजना —उसका अनुच्छेद-वृक्ष, शीर्षक, पृष्ठ-संख्याएँ और मूल पाठ— पढ़ता है और उस योजना की तत्व-पूर्णता की जाँच प्रारूपण दिशानिर्देश के अनुसार करता है: कौन-से तत्व मौजूद हैं, कौन-से अनुपस्थित हैं, कौन-से केवल शीर्षक के रूप में हैं और उनके नीचे कोई पाठ नहीं है, और हर एक कहाँ स्थित है — जहाँ सामग्री में पृष्ठ-संख्याएँ हैं वहाँ पृष्ठ से, अन्यथा पंक्ति से। यह सामग्री में घोषित योजना-प्रकार पर एक संस्करणबद्ध नियम-पैक लागू करता है, और हर निष्कर्ष उस खंड का उल्लेख करता है जिससे वह आया तथा बताता है कि वह खंड सीधा अनिवार्यता है, सिद्धांत है या स्थानीय विन्यास; जो जाँच चल नहीं सकी वह चुपचाप पास होने के बजाय `skipped` में बताती है।
 
+## Install
+
+```sh
+dsh plugin --profile <name> add dsh-emergency-plan
+dsh --profile <name> --dump-config | grep 'dsh-emergency-plan'
+```
+
 ## आउटपुट कैसा दिखता है
 
 ![Terminal demo of dsh-emergency-plan: real output over its EP-004 fixture](https://raw.githubusercontent.com/PerryLink/dsh-emergency-plan/main/docs/assets/dsh-emergency-plan-hero.png)
@@ -69,13 +76,6 @@ is **国家安全生产监督管理总局令第88号 (2016), amended by 应急�
 ## What it does
 
 नियम-सूची, फ़ील्ड और विस्तृत व्यवहार [README.md](README.md#what-it-does) (अंग्रेज़ी मुख्य संस्करण) में हैं। यह प्लगइन केवल उद्धृत धाराओं के सामने शाब्दिक अंतर सूचीबद्ध करता है और हर न चल पाई जाँच को `skipped` में बताता है।
-
-## Install
-
-```sh
-dsh plugin --profile <name> add dsh-emergency-plan
-dsh --profile <name> --dump-config | grep 'dsh-emergency-plan'
-```
 
 ## Configuration
 
