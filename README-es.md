@@ -6,7 +6,9 @@
 
 ## Cómo se ve la salida
 
-![Terminal demo of dsh-emergency-plan: real output over its EP-004 fixture](https://raw.githubusercontent.com/PerryLink/dsh-emergency-plan/main/docs/assets/dsh-emergency-plan-demo.png)
+![Terminal demo of dsh-emergency-plan: real output over its EP-004 fixture](https://raw.githubusercontent.com/PerryLink/dsh-emergency-plan/main/docs/assets/dsh-emergency-plan-hero.png)
+
+![Animated terminal demo of dsh-emergency-plan](https://raw.githubusercontent.com/PerryLink/dsh-emergency-plan/main/docs/assets/dsh-emergency-plan-demo.gif)
 
 Salida real de este plugin sobre su propio fixture de prueba `EP-004` — no es un montaje. El paquete de reglas no inventa citas, así que cada hallazgo nombra la cláusula aplicada y advierte que su texto no se obtuvo.
 

@@ -1,0 +1,14 @@
+[
+  {
+    "path": "docs/assets/dsh-emergency-plan-hero.png",
+    "kind": "hero",
+    "alt": "dsh-emergency-plan terminal output over its EP-004 fixture",
+    "caption": "Real checker output: 13 citations checked, 34 tests passing."
+  },
+  {
+    "path": "docs/assets/dsh-emergency-plan-demo.gif",
+    "kind": "demo",
+    "alt": "Animated dsh-emergency-plan terminal session",
+    "caption": "The same run, assembled line by line."
+  }
+]

@@ -6,7 +6,9 @@
 
 ## What it looks like
 
-![Terminal demo of dsh-emergency-plan: real output over its EP-004 fixture](https://raw.githubusercontent.com/PerryLink/dsh-emergency-plan/main/docs/assets/dsh-emergency-plan-demo.png)
+![Terminal demo of dsh-emergency-plan: real output over its EP-004 fixture](https://raw.githubusercontent.com/PerryLink/dsh-emergency-plan/main/docs/assets/dsh-emergency-plan-hero.png)
+
+![Animated terminal demo of dsh-emergency-plan](https://raw.githubusercontent.com/PerryLink/dsh-emergency-plan/main/docs/assets/dsh-emergency-plan-demo.gif)
 
 Real output from this plugin over its own `EP-004` test fixture — not a mock-up. The rule pack ships no invented quotations, so a finding names both the clause it applied and the fact that the clause text was not obtained.
 

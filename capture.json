@@ -1,0 +1,19 @@
+{
+  "schema": "dsh-capture/v1",
+  "repository": "dsh-emergency-plan",
+  "storyboard": [
+    "$ node scripts/check-citations.mjs",
+    "$ pnpm test",
+    "EP-004 / EP-009 findings"
+  ],
+  "commands": [
+    "node scripts/check-citations.mjs",
+    "pnpm test"
+  ],
+  "renderer": "plugins/_archive/growth/2026-10-17/asset-tools/render.mjs",
+  "size": {
+    "hero": "1280x720",
+    "gif": "960x540",
+    "gifSeconds": 4
+  }
+}
