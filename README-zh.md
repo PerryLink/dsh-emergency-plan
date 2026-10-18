@@ -41,22 +41,18 @@ dsh --profile <name> --dump-config | grep 'dsh-emergency-plan'
 
 **边界（中文译文，以英文原文为准）：** 本插件依据编制导则核对**应急预案的要素齐备性**，并按页定位每个要素，报出与所引条款之间的字面差异。它不是 `dsh-rulefile-check`（后者审查规范性文件的合法性），也不是 `dsh-hidden-risk-map`（后者把隐患台账映射到判定条款）。它读取一份预案，报出哪些要素存在、缺失或为空，以及它们位于何处。
 
-> ### ⚠️ Two corrections this plugin is built on — please read
+> ### ⚠️ 本插件建立在两处更正之上——请阅读（以英文原文为准）
 >
-> **1. "八要素" is not a current requirement.** The familiar list — 总则, 事故风险描述, 应急组织机构及职责,
-> 预警及信息报告, 应急响应, 信息公开, 后期处置, 保障措施, 应急预案管理 — belongs to
-> **GB/T 29639—2013**, which has been **entirely replaced**. Its namesake is not found in any current
-> national document. The standard in force, **GB/T 29639-2020**, gives the comprehensive plan **five**
-> first-level elements in clause 6 (6.1 总则 / 6.2 应急组织机构及职责 / 6.3 应急响应 / 6.4 后期处置 /
-> 6.5 应急保障), and its foreword records that **编制目的 was removed**. Any rule citing 2013 clause
-> numbers is citing a withdrawn standard. This pack cites only the 2020 clause numbers, and a test
-> asserts that the 2013 number never appears.
+> **1. “八要素”不是现行要求。** 那份熟悉的清单——总则、事故风险描述、应急组织机构及职责、
+> 预警及信息报告、应急响应、信息公开、后期处置、保障措施、应急预案管理——属于
+> **GB/T 29639—2013**，而该标准已被**完全替代**。这一名称在任何现行国家文件中都找不到。现行标准
+> **GB/T 29639-2020**在第6条中为综合预案规定了**五个**一级要素（6.1 总则 / 6.2 应急组织机构及职责 /
+> 6.3 应急响应 / 6.4 后期处置 / 6.5 应急保障），其前言记载**编制目的已被删除**。任何援引 2013 版条号的
+> 规则都是在援引一项已废止的标准。本规则包只援引 2020 版的条号，并有测试断言 2013 版编号从不出现。
 >
-> **2. Page numbers have no mandatory basis.** No national document requires a plan to carry page
-> numbers; the appendix that governs 目次 is a **资料性附录** (informative, not normative) and does not
-> contain the word 页码. Page numbers are therefore treated as **locating information that helps a
-> reviewer**, reported at `info`, and never phrased as "does not comply with X". When a plan carries no
-> page numbers the report falls back to line numbers.
+> **2. 页码没有强制性依据。** 没有任何国家文件要求预案标注页码；规范目次的附录是一份**资料性附录**
+> （informative，非规范性），其中不含“页码”一词。因此，页码被视为**有助于评审者定位的信息**，
+> 以 `info` 级别报告，且从不用“不符合 X”的措辞。当预案未标注页码时，报告回退到行号。
 
 A third, smaller correction is recorded in the pack: 《生产安全事故应急预案管理办法》's correct version
 is **国家安全生产监督管理总局令第88号 (2016), amended by 应急管理部令第2号 (2019)** — not a bare
