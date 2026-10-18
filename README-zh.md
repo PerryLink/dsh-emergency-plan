@@ -39,11 +39,7 @@ dsh --profile <name> --dump-config | grep 'dsh-emergency-plan'
 | 《生产经营单位生产安全事故应急预案编制导则》 | GB/T 29639-2020 | EP-001, EP-002, EP-003, EP-004, EP-005, EP-006, EP-007, EP-008, EP-009 |
 | 《生产安全事故应急预案管理办法》 | 国家安全生产监督管理总局令第88号（应急管理部令第2号修正） | EP-001, EP-002, EP-003, EP-009 |
 
-**Boundary:** this plugin checks an **emergency plan's element completeness** against the drafting
-guideline and locates each element by page, reporting literal differences against cited clauses. It is
-not `dsh-rulefile-check` (which audits a regulatory document's legality) and not
-`dsh-hidden-risk-map` (which maps a hazard ledger to determination clauses). It reads one plan and
-reports which elements are present, absent or empty, and where.
+**边界（中文译文，以英文原文为准）：** 本插件依据编制导则核对**应急预案的要素齐备性**，并按页定位每个要素，报出与所引条款之间的字面差异。它不是 `dsh-rulefile-check`（后者审查规范性文件的合法性），也不是 `dsh-hidden-risk-map`（后者把隐患台账映射到判定条款）。它读取一份预案，报出哪些要素存在、缺失或为空，以及它们位于何处。
 
 > ### ⚠️ Two corrections this plugin is built on — please read
 >
