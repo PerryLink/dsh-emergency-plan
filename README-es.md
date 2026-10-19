@@ -3,6 +3,7 @@
 [English](README.md) · [简体中文](README-zh.md) · [Español](README-es.md) · [Português](README-pt.md) · [हिन्दी](README-hi.md)
 
 [![DSH Market](https://raw.githubusercontent.com/2BingLing/dsh-market/master/assets/readme/badge-listed-en.svg)](https://dsh.market/)
+[![dshfind](https://dshfind.com/api/badge/PerryLink/dsh-emergency-plan?metric=downloads)](https://dshfind.com/en/plugins/PerryLink/dsh-emergency-plan?ref=badge)
 
 `dsh-emergency-plan` lee un plan de emergencia —su árbol de secciones, títulos, números de página y texto— y comprueba la completitud de los elementos de ese plan frente a la guía de redacción: qué elementos están presentes, cuáles faltan, cuáles aparecen solo como título sin texto debajo y dónde se sitúa cada uno, por página cuando el material trae números de página y por línea en caso contrario. Aplica un paquete de reglas versionado al tipo de plan que declara el material, y cada hallazgo indica la cláusula de la que procede y si esa cláusula es un requisito directo, un principio o una configuración local; una comprobación que no pudo ejecutarse lo dice en `skipped` en lugar de pasar en silencio.
 

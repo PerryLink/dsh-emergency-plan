@@ -3,6 +3,7 @@
 [English](README.md) · [简体中文](README-zh.md) · [Español](README-es.md) · [Português](README-pt.md) · [हिन्दी](README-hi.md)
 
 [![DSH Market](https://raw.githubusercontent.com/2BingLing/dsh-market/master/assets/readme/badge-listed-en.svg)](https://dsh.market/)
+[![dshfind](https://dshfind.com/api/badge/PerryLink/dsh-emergency-plan?metric=downloads)](https://dshfind.com/en/plugins/PerryLink/dsh-emergency-plan?ref=badge)
 
 `dsh-emergency-plan` reads one emergency plan — its section tree, headings, page numbers and body text — and checks that plan's element completeness against the drafting guideline: which elements are present, which are absent, which appear only as a heading with no text under them, and where each one sits, by page where the material carries page numbers and by line otherwise. It applies a versioned rule pack to the plan type the material declares, and every finding names the clause it came from and states whether that clause is a direct requirement, a principle or a local configuration; a check that could not run says so in `skipped` instead of passing silently.
 
