@@ -29,6 +29,32 @@ dsh --profile <name> --dump-config | grep 'dsh-emergency-plan'
 
 नीचे दी गई तालिका उदाहरण-समुच्चय है: पहली पंक्ति विस्तृत केस है, बाकी संक्षिप्त केस हैं।
 
+#### विस्तृत आउटपुट
+
+**उपकरण** `emergency_plan`
+
+**इनपुट**
+
+~~~json
+{"name":"缺要素的专项预案","planType":"special","sections":[{"title":"适用范围"},{"title":"应急组织机构及职责"},{"title":"响应启动"}]}
+~~~
+ 
+**आउटपुट**
+
+~~~json
+{
+  "id": "dsh-emergency-plan.EP-001.811c9dc5",
+  "ruleId": "EP-001",
+  "severity": "warn",
+  "locator": {},
+  "found": "材料中未找到要素「处置措施」",
+  "expected": "专项应急预案应当包含要素「处置措施」",
+  "fix": "检查的别名：处置措施 / 应急处置措施 / 应急处置；如本机构使用其他表述，请在该要素的 aliases 中补充"
+}
+~~~
+
+*स्रोत `dsh-emergency-plan/tests/fixtures/EP-001/EP-001-unsafe.json; dsh-emergency-plan/tests/fixtures/EP-001/cases.json; dsh-emergency-plan/rules/emergency-plan.yaml; dsh-emergency-plan/tests/index.test.ts`*
+
 | आपका सवाल | इसका जवाब |
 |---|---|
 | सामग्री में नहीं लिखा है कि यह तीन योजना-प्रकारों में से कौन-सा है। तब क्या होता है? | `EP-004` दर्ज करता है कि सामग्री में `planType` घोषित नहीं है, क्योंकि तीनों प्रकारों की तत्व-सूची अलग-अलग है। यह केवल यह देखता है कि घोषणा मौजूद है, यह नहीं कि वह सही है; घोषणा अनुपस्थित रहने तक `EP-002` और `EP-003` `skipped` में लिख देते हैं कि उन्होंने कौन-सी तत्व-सूची मान ली। |

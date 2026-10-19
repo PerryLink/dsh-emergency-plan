@@ -29,6 +29,32 @@ Saída real deste plugin sobre o seu próprio fixture de teste `EP-004` — não
 
 A tabela abaixo é o conjunto de exemplos: a primeira linha é o caso detalhado e as demais são casos curtos.
 
+#### Saída detalhada
+
+**Ferramenta** `emergency_plan`
+
+**Entrada**
+
+~~~json
+{"name":"缺要素的专项预案","planType":"special","sections":[{"title":"适用范围"},{"title":"应急组织机构及职责"},{"title":"响应启动"}]}
+~~~
+ 
+**Saída**
+
+~~~json
+{
+  "id": "dsh-emergency-plan.EP-001.811c9dc5",
+  "ruleId": "EP-001",
+  "severity": "warn",
+  "locator": {},
+  "found": "材料中未找到要素「处置措施」",
+  "expected": "专项应急预案应当包含要素「处置措施」",
+  "fix": "检查的别名：处置措施 / 应急处置措施 / 应急处置；如本机构使用其他表述，请在该要素的 aliases 中补充"
+}
+~~~
+
+*Observado em `dsh-emergency-plan/tests/fixtures/EP-001/EP-001-unsafe.json; dsh-emergency-plan/tests/fixtures/EP-001/cases.json; dsh-emergency-plan/rules/emergency-plan.yaml; dsh-emergency-plan/tests/index.test.ts`*
+
 | Você pergunta | O que ele responde |
 |---|---|
 | O material não diz qual dos três tipos de plano é. O que acontece? | `EP-004` reporta que o material não declara `planType`, porque cada um dos três tipos tem a sua própria lista de elementos. Verifica apenas que a declaração existe, não que esteja correta; enquanto faltar, `EP-002` e `EP-003` indicam em `skipped` que lista de elementos assumiram. |

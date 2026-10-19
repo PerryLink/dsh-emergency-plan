@@ -29,6 +29,32 @@ dsh --profile <name> --dump-config | grep 'dsh-emergency-plan'
 
 下表是示例集：第一行是详细走查，其余行是简短案例。
 
+#### 详细输出
+
+**工具** `emergency_plan`
+
+**输入**
+
+~~~json
+{"name":"缺要素的专项预案","planType":"special","sections":[{"title":"适用范围"},{"title":"应急组织机构及职责"},{"title":"响应启动"}]}
+~~~
+ 
+**输出**
+
+~~~json
+{
+  "id": "dsh-emergency-plan.EP-001.811c9dc5",
+  "ruleId": "EP-001",
+  "severity": "warn",
+  "locator": {},
+  "found": "材料中未找到要素「处置措施」",
+  "expected": "专项应急预案应当包含要素「处置措施」",
+  "fix": "检查的别名：处置措施 / 应急处置措施 / 应急处置；如本机构使用其他表述，请在该要素的 aliases 中补充"
+}
+~~~
+
+*来源 `dsh-emergency-plan/tests/fixtures/EP-001/EP-001-unsafe.json; dsh-emergency-plan/tests/fixtures/EP-001/cases.json; dsh-emergency-plan/rules/emergency-plan.yaml; dsh-emergency-plan/tests/index.test.ts`*
+
 | 你会问 | 它怎么答 |
 |---|---|
 | 材料里没写这是三类预案中的哪一类，会怎么样？ | `EP-004` 会报出材料未声明 `planType`，因为三类预案的要素清单各不相同。它只核对是否声明，不判断该声明是否正确；声明缺失期间，`EP-002` 与 `EP-003` 会在 `skipped` 中写明自己假定按哪一份要素清单检查。 |

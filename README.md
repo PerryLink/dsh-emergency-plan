@@ -28,6 +28,32 @@ dsh --profile <name> --dump-config | grep 'dsh-emergency-plan'
 
 The table below is the example set: the first row is the detailed walkthrough, the remaining rows are short cases.
 
+#### Detailed output
+
+**Tool** `emergency_plan`
+
+**Input**
+
+~~~json
+{"name":"缺要素的专项预案","planType":"special","sections":[{"title":"适用范围"},{"title":"应急组织机构及职责"},{"title":"响应启动"}]}
+~~~
+ 
+**Output**
+
+~~~json
+{
+  "id": "dsh-emergency-plan.EP-001.811c9dc5",
+  "ruleId": "EP-001",
+  "severity": "warn",
+  "locator": {},
+  "found": "材料中未找到要素「处置措施」",
+  "expected": "专项应急预案应当包含要素「处置措施」",
+  "fix": "检查的别名：处置措施 / 应急处置措施 / 应急处置；如本机构使用其他表述，请在该要素的 aliases 中补充"
+}
+~~~
+
+*Observed from `dsh-emergency-plan/tests/fixtures/EP-001/EP-001-unsafe.json; dsh-emergency-plan/tests/fixtures/EP-001/cases.json; dsh-emergency-plan/rules/emergency-plan.yaml; dsh-emergency-plan/tests/index.test.ts`*
+
 | You ask | What it answers |
 |---|---|
 | Our material never says which of the three plan types it is. What happens? | `EP-004` reports the material for not declaring `planType`, because each of the three types carries a different element list. It checks only that the declaration is there, not that it is the right one; while it is missing, `EP-002` and `EP-003` state in `skipped` which element list they assumed. |
