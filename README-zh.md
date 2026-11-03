@@ -1,6 +1,6 @@
 # dsh-emergency-plan — 应急预案要素齐备性与条款级页码定位
 
-## 快速试跑（1 分钟）
+### 快速试跑（1 分钟）
 
 ```bash
 node samples/quickstart/run.mjs --check
