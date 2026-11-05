@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="480" viewBox="0 0 1200 480" role="img" aria-label="dsh-emergency-plan pipeline">
+<title>dsh-emergency-plan pipeline</title>
+<rect width="1200" height="480" rx="18" fill="#ffffff"/>
+<text x="60" y="62" fill="#1f2328" font-family="ui-sans-serif,system-ui,sans-serif" font-size="30" font-weight="700">dsh-emergency-plan</text>
+<text x="60" y="94" fill="#57606a" font-family="ui-monospace,monospace" font-size="16">plan.json / plan.yaml → emergency_plan → issues[] + skipped[]</text>
+<line x1="60" y1="118" x2="1140" y2="118" stroke="#d0d7de"/>
+<rect x="70" y="150" width="300" height="120" rx="14" fill="#f6f8fa" stroke="#d0d7de" stroke-width="2"/>
+<text x="220" y="202" fill="#1f2328" text-anchor="middle" font-family="ui-monospace,monospace" font-size="18" font-weight="700">plan.json / plan.yaml</text>
+<text x="220" y="232" fill="#57606a" text-anchor="middle" font-family="ui-monospace,monospace" font-size="13">sections[] · page · body</text>
+<path d="M378 210h40" stroke="#57606a" stroke-width="3"/>
+<path d="M412 203l10 7-10 7" fill="none" stroke="#57606a" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="450" y="150" width="300" height="120" rx="14" fill="#f6f8fa" stroke="#4B67B4" stroke-width="2"/>
+<text x="600" y="202" fill="#1f2328" text-anchor="middle" font-family="ui-monospace,monospace" font-size="18" font-weight="700">emergency_plan</text>
+<text x="600" y="232" fill="#57606a" text-anchor="middle" font-family="ui-monospace,monospace" font-size="13">tool · JSON | YAML</text>
+<path d="M758 210h40" stroke="#57606a" stroke-width="3"/>
+<path d="M792 203l10 7-10 7" fill="none" stroke="#57606a" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="830" y="150" width="300" height="120" rx="14" fill="#f6f8fa" stroke="#16a34a" stroke-width="2"/>
+<text x="980" y="202" fill="#1f2328" text-anchor="middle" font-family="ui-monospace,monospace" font-size="18" font-weight="700">issues[] + skipped[]</text>
+<text x="980" y="232" fill="#57606a" text-anchor="middle" font-family="ui-monospace,monospace" font-size="13">found · expected · fix</text>
+<path d="M600 270v30" stroke="#4B67B4" stroke-width="2" stroke-dasharray="5 5"/>
+<rect x="330" y="300" width="540" height="70" rx="12" fill="#f6f8fa" stroke="#4B67B4" stroke-width="2"/>
+<text x="600" y="330" fill="#1f2328" text-anchor="middle" font-family="ui-monospace,monospace" font-size="15" font-weight="700">rules/emergency-plan.yaml</text>
+<text x="600" y="352" fill="#57606a" text-anchor="middle" font-family="ui-monospace,monospace" font-size="13">EP-001 … EP-009 · direct · principle · local</text>
+<rect x="70" y="394" width="1060" height="44" rx="10" fill="#f6f8fa" stroke="#d0d7de"/>
+<text x="600" y="422" fill="#1f2328" text-anchor="middle" font-family="ui-monospace,monospace" font-size="14">config: rulesFile · disabledRules · onlyRules · skipNotes · timeoutMs</text>
+<text x="60" y="466" fill="#57606a" font-family="ui-monospace,monospace" font-size="13">GB/T 29639-2020 · rules/evidence/ · Apache-2.0</text>
+</svg>
