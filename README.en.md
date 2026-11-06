@@ -1,8 +1,8 @@
 <div align="center">
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="docs/assets/dsh-emergency-plan-flow-dark.svg">
-  <img src="docs/assets/dsh-emergency-plan-flow-light.svg" width="100%" alt="dsh-emergency-plan pipeline: plan.json/plan.yaml → emergency_plan tool → rules/emergency-plan.yaml (EP-001…EP-009) → issues[] + skipped[]; configuration keys rulesFile / disabledRules / onlyRules / skipNotes / timeoutMs">
+  <source media="(prefers-color-scheme: dark)" srcset="docs/assets/dsh-emergency-plan-hero-en-dark.webp">
+  <img src="docs/assets/dsh-emergency-plan-hero-en-light.webp" width="100%" alt="dsh-emergency-plan banner: on the right, the special plan's element list 7.1-7.4 laid against the section headings - 7.1 and 7.2 carry body text, 7.3 is a heading only, 7.4 is not found, each row with its page; below, the evidence-kind ceiling of the nine rules">
 </picture>
 
 # dsh-emergency-plan
@@ -37,6 +37,11 @@ dsh plugin --profile <name> add dsh-emergency-plan
 ## What it is
 
 `dsh-emergency-plan` reads one emergency plan — its section tree, headings, page numbers and body text — applies a versioned rule pack for the plan type the material declares (comprehensive, special or on-site), and checks the plan's element completeness: which elements are present, which are absent, which appear only as a heading with no body beneath, and where each one sits, by page when the material carries page numbers and by line otherwise. Every finding names the clause it came from and states whether that clause is a direct requirement, a principle or a local configuration; a check that could not run says so in `skipped` instead of passing silently. It reports literal differences between the material and the cited clauses only — no judgement on content quality, compliance, liability or safety. It runs entirely locally: no network requests, no model calls, and the source material is never modified.
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="docs/assets/dsh-emergency-plan-flow-v5-dark.svg">
+  <img src="docs/assets/dsh-emergency-plan-flow-v5-light.svg" width="100%" alt="dsh-emergency-plan structure: the EP-001 element list laid row by row against the material's section tree; headings are matched by normalized equality, containment and edit distance; each row ends in a disposition, and the bench forks into issues[] and skipped[]; the cross-cutting checks EP-002 to EP-009 report their state in the same pass">
+</picture>
 
 ## Three-step setup
 
@@ -374,13 +379,13 @@ Directory layout:
 | `samples/quickstart/` | the quickstart sample and its expected output |
 | `cordis.patch.yml` | bundle row declaration |
 
-The README images are generated programmatically by [`scripts/gen-readme-assets.py`](scripts/gen-readme-assets.py) (Python + Pillow) and are safe to re-run:
+The README images are generated programmatically by [`scripts/gen-readme-assets.py`](scripts/gen-readme-assets.py) (Pillow for the localized hero, a hand-written SVG for the structure figure) and are safe to re-run:
 
 ```sh
 python scripts/gen-readme-assets.py
 ```
 
-It writes only `docs/assets/dsh-emergency-plan-flow-{light,dark}.svg`. The older single-theme flow diagram and demo images stay in `docs/assets/` for external links; the README references only the new light/dark pair.
+It writes two sets: `docs/assets/dsh-emergency-plan-hero-{zh,en}-{light,dark}.webp` and `docs/assets/dsh-emergency-plan-flow-v5-{light,dark}.svg`. The older single-theme flow diagram and demo images stay in `docs/assets/` for external links; the README references only these two new sets.
 
 Topics: `deepseek-harness`, `dsh`, `dsh-plugin`, `cordis`, `emergency`, `plan`
 

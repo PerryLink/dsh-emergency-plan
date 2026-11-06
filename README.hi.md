@@ -1,8 +1,8 @@
 <div align="center">
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="docs/assets/dsh-emergency-plan-flow-dark.svg">
-  <img src="docs/assets/dsh-emergency-plan-flow-light.svg" width="100%" alt="dsh-emergency-plan कार्यप्रवाह: plan.json/plan.yaml → emergency_plan उपकरण → rules/emergency-plan.yaml (EP-001…EP-009) → issues[] + skipped[]; कॉन्फ़िगरेशन कुंजियाँ rulesFile / disabledRules / onlyRules / skipNotes / timeoutMs">
+  <source media="(prefers-color-scheme: dark)" srcset="docs/assets/dsh-emergency-plan-hero-en-dark.webp">
+  <img src="docs/assets/dsh-emergency-plan-hero-en-light.webp" width="100%" alt="dsh-emergency-plan बैनर: दाईं ओर विशेष योजना की तत्व-सूची 7.1-7.4 सामग्री के शीर्षकों के सामने - 7.1 और 7.2 में पाठ है, 7.3 केवल शीर्षक है, 7.4 नहीं मिला, हर पंक्ति पर पृष्ठ; नीचे नौ नियमों की आधार-श्रेणी की सीमा">
 </picture>
 
 # dsh-emergency-plan
@@ -37,6 +37,11 @@ dsh plugin --profile <name> add dsh-emergency-plan
 ## यह क्या है
 
 `dsh-emergency-plan` एक आपातकालीन योजना —उसका अनुच्छेद-वृक्ष, शीर्षक, पृष्ठ-संख्याएँ और मूल पाठ— पढ़ता है और सामग्री में घोषित योजना-प्रकार (समग्र, विशेष या स्थल-प्रबंधन) पर संस्करणबद्ध नियम-पैक लागू करके उसकी तत्व-पूर्णता जाँचता है: कौन-से तत्व मौजूद हैं, कौन-से अनुपस्थित हैं, कौन-से केवल शीर्षक के रूप में हैं और उनके नीचे कोई पाठ नहीं है, और हर एक कहाँ स्थित है — जहाँ सामग्री में पृष्ठ-संख्याएँ हैं वहाँ पृष्ठ से, अन्यथा पंक्ति से। हर निष्कर्ष उस खंड का उल्लेख करता है जिससे वह आया और बताता है कि वह खंड सीधा अनिवार्यता है, सिद्धांत है या स्थानीय विन्यास; जो जाँच चल नहीं सकी वह चुपचाप पास होने के बजाय `skipped` में बताती है। यह केवल सामग्री और उद्धृत खंडों के बीच शाब्दिक अंतर गिनाता है: सामग्री की गुणवत्ता, अनुपालन या उत्तरदायित्व पर निर्णय नहीं देता। पूरी तरह स्थानीय चलता है: कोई नेटवर्क नहीं, कोई मॉडल कॉल नहीं, और मूल सामग्री कभी नहीं बदलती।
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="docs/assets/dsh-emergency-plan-flow-v5-dark.svg">
+  <img src="docs/assets/dsh-emergency-plan-flow-v5-light.svg" width="100%" alt="dsh-emergency-plan संरचना: EP-001 तत्व-सूची सामग्री के अनुच्छेद-वृक्ष के सामने पंक्ति-दर-पंक्ति; शीर्षक मिलान तीन चरणों में (समानता, समावेश, संपादन दूरी); हर पंक्ति का निष्कर्ष issues[] और skipped[] में बँटता है; EP-002 से EP-009 उसी पास में अपनी स्थिति बताते हैं">
+</picture>
 
 ## तीन चरणों में शुरुआत
 
@@ -365,13 +370,13 @@ pnpm pack
 | `samples/quickstart/` | क्विकस्टार्ट नमूना और अपेक्षित आउटपुट |
 | `cordis.patch.yml` | बंडल पंक्ति घोषणा |
 
-README की छवियाँ [`scripts/gen-readme-assets.py`](scripts/gen-readme-assets.py) (Python + Pillow) से प्रोग्रामेटिक रूप से बनती हैं और दोबारा चलाई जा सकती हैं:
+README की छवियाँ [`scripts/gen-readme-assets.py`](scripts/gen-readme-assets.py) (स्थानीयकृत hero के लिए Pillow और संरचना-आरेख के लिए हाथ से लिखा SVG) से प्रोग्रामेटिक रूप से बनती हैं और दोबारा चलाई जा सकती हैं:
 
 ```sh
 python scripts/gen-readme-assets.py
 ```
 
-यह केवल `docs/assets/dsh-emergency-plan-flow-{light,dark}.svg` लिखता है। पुराना एक-थीम प्रवाह आरेख और डेमो छवियाँ बाहरी लिंक के लिए `docs/assets/` में रहती हैं; README केवल नए हल्के/गहरे जोड़े का संदर्भ देता है।
+यह दो समूह लिखता है: `docs/assets/dsh-emergency-plan-hero-{zh,en}-{light,dark}.webp` और `docs/assets/dsh-emergency-plan-flow-v5-{light,dark}.svg`. पुराना एक-थीम प्रवाह आरेख और डेमो छवियाँ बाहरी लिंक के लिए `docs/assets/` में रहती हैं; README केवल इन दो नए समूहों का संदर्भ देता है।
 
 Topics: `deepseek-harness`, `dsh`, `dsh-plugin`, `cordis`, `emergency`, `plan`
 

@@ -1,8 +1,8 @@
 <div align="center">
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="docs/assets/dsh-emergency-plan-flow-dark.svg">
-  <img src="docs/assets/dsh-emergency-plan-flow-light.svg" width="100%" alt="Fluxo do dsh-emergency-plan: plan.json/plan.yaml → ferramenta emergency_plan → rules/emergency-plan.yaml (EP-001…EP-009) → issues[] + skipped[]; chaves de configuração rulesFile / disabledRules / onlyRules / skipNotes / timeoutMs">
+  <source media="(prefers-color-scheme: dark)" srcset="docs/assets/dsh-emergency-plan-hero-en-dark.webp">
+  <img src="docs/assets/dsh-emergency-plan-hero-en-light.webp" width="100%" alt="Banner do dsh-emergency-plan: à direita, a lista de elementos 7.1-7.4 do plano especial frente aos títulos do material: 7.1 e 7.2 com corpo, 7.3 só título, 7.4 não encontrado, cada linha com sua página; abaixo, o teto de gravidade por tipo de fundamento">
 </picture>
 
 # dsh-emergency-plan
@@ -37,6 +37,11 @@ dsh plugin --profile <name> add dsh-emergency-plan
 ## O que é
 
 `dsh-emergency-plan` lê um plano de emergência —a sua árvore de secções, títulos, números de página e texto— e aplica um pacote de regras versionado ao tipo de plano declarado pelo material (abrangente, especial ou de atuação no local), verificando a completude dos elementos: quais estão presentes, quais faltam, quais aparecem apenas como título sem texto por baixo e onde se situa cada um —por página quando o material traz números de página e por linha caso contrário. Cada achado indica a cláusula de onde vem e se essa cláusula é um requisito direto, um princípio ou uma configuração local; uma verificação que não pôde correr di-lo em `skipped` em vez de passar em silêncio. Apenas enumera diferenças literais entre o material e as cláusulas citadas: não julga a qualidade do conteúdo, o cumprimento nem a responsabilidade. Corre localmente: sem rede, sem chamadas ao modelo e sem alterar o original.
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="docs/assets/dsh-emergency-plan-flow-v5-dark.svg">
+  <img src="docs/assets/dsh-emergency-plan-flow-v5-light.svg" width="100%" alt="Estrutura do dsh-emergency-plan: a lista de elementos EP-001 frente à árvore de seções do material, com o emparelhamento em três passos (igualdade, contenção, distância de edição); cada linha termina numa disposição e a bancada se bifurca em issues[] e skipped[]; as verificações EP-002 a EP-009 informam seu estado na mesma passagem">
+</picture>
 
 ## Instalação em três passos
 
@@ -366,13 +371,13 @@ Estrutura do diretório:
 | `samples/quickstart/` | amostra de início rápido e saída esperada |
 | `cordis.patch.yml` | declaração da linha do bundle |
 
-As imagens do README são geradas programaticamente por [`scripts/gen-readme-assets.py`](scripts/gen-readme-assets.py) (Python + Pillow) e podem ser repetidas:
+As imagens do README são geradas programaticamente por [`scripts/gen-readme-assets.py`](scripts/gen-readme-assets.py) (Pillow para o hero localizado e um SVG escrito à mão para a figura de estrutura) e podem ser repetidas:
 
 ```sh
 python scripts/gen-readme-assets.py
 ```
 
-Escreve apenas `docs/assets/dsh-emergency-plan-flow-{light,dark}.svg`. O diagrama de fluxo antigo de tema único e as imagens de demonstração ficam em `docs/assets/` para links externos; o README só referencia o novo par claro/escuro.
+Escreve dois conjuntos: `docs/assets/dsh-emergency-plan-hero-{zh,en}-{light,dark}.webp` e `docs/assets/dsh-emergency-plan-flow-v5-{light,dark}.svg`. O diagrama de fluxo antigo de tema único e as imagens de demonstração ficam em `docs/assets/` para links externos; o README só referencia estes dois conjuntos novos.
 
 Topics: `deepseek-harness`, `dsh`, `dsh-plugin`, `cordis`, `emergency`, `plan`
 

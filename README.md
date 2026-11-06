@@ -1,8 +1,8 @@
 <div align="center">
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="docs/assets/dsh-emergency-plan-flow-dark.svg">
-  <img src="docs/assets/dsh-emergency-plan-flow-light.svg" width="100%" alt="dsh-emergency-plan 工作流：plan.json/plan.yaml → emergency_plan 工具 → rules/emergency-plan.yaml（EP-001…EP-009）→ issues[] + skipped[]；配置键 rulesFile · disabledRules · onlyRules · skipNotes · timeoutMs">
+  <source media="(prefers-color-scheme: dark)" srcset="docs/assets/dsh-emergency-plan-hero-zh-dark.webp">
+  <img src="docs/assets/dsh-emergency-plan-hero-zh-light.webp" width="100%" alt="dsh-emergency-plan 横幅：右侧把专项应急预案的要素清单 7.1~7.4 逐行对到材料章节上——7.1 与 7.2 有正文，7.3 只有标题，7.4 未找到，每行标出页码；下方是 9 条规则的依据类型封顶">
 </picture>
 
 # dsh-emergency-plan
@@ -37,6 +37,11 @@ dsh plugin --profile <name> add dsh-emergency-plan
 ## 它是什么
 
 `dsh-emergency-plan` 读取一份应急预案——章节树、标题、页码与正文——按材料声明的预案类型（综合应急预案 / 专项应急预案 / 现场处置方案）套用版本化规则库，核对这份预案的要素齐备性：哪些要素已出现、哪些缺失、哪些只有标题而标题之下没有正文，以及各要素在材料里的位置——材料带页码时按页定位，否则按行号定位。每条差异都写出所依据的条款，并标明该条款是直接规定、原则性推论还是本机构配置；无法执行的检查会在 `skipped` 中说明，而不是静默通过。它只列材料与所引条款之间的字面差异，不判断内容写得好不好，也不作出合规、责任或安全定性。纯本地运行：不联网、不调用模型、不改原件。
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="docs/assets/dsh-emergency-plan-flow-v5-dark.svg">
+  <img src="docs/assets/dsh-emergency-plan-flow-v5-light.svg" width="100%" alt="dsh-emergency-plan 结构图：EP-001 要素清单逐行对照材料章节树，标题匹配走归一化等值、包含、编辑距离三步，每行算出行级判定后分岔成 issues[] 与 skipped[] 两个出口；横切检查 EP-002 到 EP-009 在同一遍里逐条给出状态">
+</picture>
 
 ## 三步上手
 
@@ -346,13 +351,13 @@ pnpm pack
 | `samples/quickstart/` | 试跑样例与期望输出 |
 | `cordis.patch.yml` | bundle 行声明 |
 
-README 配图由 [`scripts/gen-readme-assets.py`](scripts/gen-readme-assets.py) 程序化生成（Python + Pillow），可重复执行：
+README 配图由 [`scripts/gen-readme-assets.py`](scripts/gen-readme-assets.py) 程序化生成（Pillow 画本地化 hero、手写 SVG 画结构图），可重复执行：
 
 ```sh
 python scripts/gen-readme-assets.py
 ```
 
-它只写出 `docs/assets/dsh-emergency-plan-flow-{light,dark}.svg` 两个文件。旧的单版流程图与演示图保留在 `docs/assets/` 供外链使用，README 只引用新生成的深浅双版。
+它写出 `docs/assets/dsh-emergency-plan-hero-{zh,en}-{light,dark}.webp` 与 `docs/assets/dsh-emergency-plan-flow-v5-{light,dark}.svg` 两组文件。旧的单版流程图与演示图保留在 `docs/assets/` 供外链使用，README 只引用新生成的这两组。
 
 Topics：`deepseek-harness`, `dsh`, `dsh-plugin`, `cordis`, `emergency`, `plan`
 
