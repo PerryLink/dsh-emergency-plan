@@ -1,0 +1,19 @@
+{
+  "schemaVersion": 1,
+  "tier": "L2-document",
+  "input_formats": [
+    "json",
+    "yaml"
+  ],
+  "outputs": [
+    "markdown",
+    "json"
+  ],
+  "rules": {
+    "total": 9
+  },
+  "limits": [
+    "只读结构化预案，不读 docx",
+    "无真实预案 P/R"
+  ]
+}
