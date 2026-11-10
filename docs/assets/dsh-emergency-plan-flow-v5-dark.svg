@@ -1,0 +1,134 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="660" viewBox="0 0 1100 660" role="img" aria-labelledby="t d">
+<title id="t">dsh-emergency-plan — check bench</title>
+<desc id="d">One element list (EP-001, 7.1-7.4) laid against the material headings in three widening match steps; each row ends in a disposition. The bench forks into the two report exits: issues[] and skipped[]. A cross-cutting rail carries EP-002 to EP-009 and their state in the same pass.</desc>
+<defs>
+<linearGradient id="bg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#131a2a"/><stop offset="1" stop-color="#0c1016"/></linearGradient>
+<filter id="soft" x="-8%" y="-14%" width="116%" height="132%"><feDropShadow dx="0" dy="5" stdDeviation="11" flood-color="#000000" flood-opacity="0.45"/></filter>
+</defs>
+<rect width="1100" height="660" rx="22" fill="url(#bg)"/>
+<rect x="0.5" y="0.5" width="1099" height="659" rx="22" fill="none" stroke="#2e374b"/>
+<text x="40" y="52" fill="#8496f5" font-family="ui-monospace,Consolas,'Courier New',monospace" font-size="11" font-weight="700" text-anchor="start" letter-spacing="1.6">STRUCTURE · CHECK BENCH</text>
+<text x="40" y="88" fill="#f0f3f9" font-family="'Microsoft YaHei','Segoe UI',ui-sans-serif,system-ui,sans-serif" font-size="21" font-weight="700" text-anchor="start">One element list, one section tree, two exits</text>
+<text x="40" y="112" fill="#a8b1c4" font-family="ui-monospace,Consolas,'Courier New',monospace" font-size="11.5" font-weight="400" text-anchor="start">material → sections[] + planType → EP-001 elements 7.1–7.4 → three-step heading match → issues[] / skipped[]</text>
+<rect x="756.16" y="38" width="303.84" height="24" rx="12" fill="#1b2231" stroke="#2e374b" stroke-width="1" filter="url(#soft)"/>
+<text x="1048" y="54" fill="#7b8396" font-family="ui-monospace,Consolas,'Courier New',monospace" font-size="10.5" font-weight="400" text-anchor="end">rules/emergency-plan.yaml · 9 rules · 2026.1</text>
+<line x1="40" y1="124" x2="1060" y2="124" stroke="#263045" stroke-width="1"/>
+<rect x="40" y="136" width="1020" height="334" rx="18" fill="#1b2231" stroke="#2e374b" stroke-width="1.2" filter="url(#soft)"/>
+<path d="M40 154a18 18 0 0 1 18 -18h984a18 18 0 0 1 18 18v22h-1020z" fill="#202839"/>
+<text x="64" y="162" fill="#8496f5" font-family="'Microsoft YaHei','Segoe UI',ui-sans-serif,system-ui,sans-serif" font-size="11" font-weight="700" text-anchor="start">ELEMENT LIST · EP-001 7.1–7.4</text>
+<text x="330" y="162" fill="#8496f5" font-family="ui-monospace,Consolas,'Courier New',monospace" font-size="11" font-weight="700" text-anchor="start">MATCH</text>
+<text x="432" y="162" fill="#8496f5" font-family="ui-monospace,Consolas,'Courier New',monospace" font-size="11" font-weight="700" text-anchor="start">MATERIAL · sections[] · planType: special</text>
+<text x="760" y="162" fill="#8496f5" font-family="'Microsoft YaHei','Segoe UI',ui-sans-serif,system-ui,sans-serif" font-size="11" font-weight="700" text-anchor="start">DISPOSITION</text>
+<line x1="64" y1="217" x2="1036" y2="217" stroke="#263045" stroke-width="1"/>
+<rect x="64" y="187" width="35" height="19" rx="6" fill="#242d42"/>
+<text x="81.5" y="199.5" fill="#8496f5" font-family="ui-monospace,Consolas,'Courier New',monospace" font-size="10.5" font-weight="700" text-anchor="middle">7.1</text>
+<text x="110" y="203" fill="#f0f3f9" font-family="'Microsoft YaHei','Segoe UI',ui-sans-serif,system-ui,sans-serif" font-size="14" font-weight="700" text-anchor="start">适用范围</text>
+<circle cx="350" cy="196" r="11" fill="#242d42"/>
+<text x="350" y="200" fill="#8496f5" font-family="ui-monospace,Consolas,'Courier New',monospace" font-size="12" font-weight="700" text-anchor="middle">1</text>
+<text x="432" y="203" fill="#a8b1c4" font-family="'Microsoft YaHei','Segoe UI',ui-sans-serif,system-ui,sans-serif" font-size="13.5" font-weight="400" text-anchor="start">一、适用范围</text>
+<rect x="682" y="186" width="44" height="19" rx="6" fill="#202839" stroke="#263045" stroke-width="1"/>
+<text x="704" y="199.5" fill="#7b8396" font-family="ui-monospace,Consolas,'Courier New',monospace" font-size="10.5" font-weight="400" text-anchor="middle">p.1</text>
+<text x="760" y="203" fill="#3fb950" font-family="'Microsoft YaHei','Segoe UI',ui-sans-serif,system-ui,sans-serif" font-size="12.5" font-weight="400" text-anchor="start">✓ body present</text>
+<text x="884" y="203" fill="#7b8396" font-family="ui-monospace,Consolas,'Courier New',monospace" font-size="11" font-weight="400" text-anchor="start">→</text>
+<text x="900" y="203" fill="#7b8396" font-family="ui-monospace,Consolas,'Courier New',monospace" font-size="11" font-weight="400" text-anchor="start">no entry</text>
+<rect x="56" y="225" width="1008" height="41" rx="10" fill="#202839"/>
+<line x1="64" y1="266" x2="1036" y2="266" stroke="#263045" stroke-width="1"/>
+<rect x="64" y="236" width="35" height="19" rx="6" fill="#242d42"/>
+<text x="81.5" y="248.5" fill="#8496f5" font-family="ui-monospace,Consolas,'Courier New',monospace" font-size="10.5" font-weight="700" text-anchor="middle">7.2</text>
+<text x="110" y="252" fill="#f0f3f9" font-family="'Microsoft YaHei','Segoe UI',ui-sans-serif,system-ui,sans-serif" font-size="14" font-weight="700" text-anchor="start">应急组织机构及职责</text>
+<circle cx="350" cy="245" r="11" fill="#242d42"/>
+<text x="350" y="249" fill="#8496f5" font-family="ui-monospace,Consolas,'Courier New',monospace" font-size="12" font-weight="700" text-anchor="middle">3</text>
+<text x="432" y="252" fill="#a8b1c4" font-family="'Microsoft YaHei','Segoe UI',ui-sans-serif,system-ui,sans-serif" font-size="13.5" font-weight="400" text-anchor="start">二、组织机构与职责</text>
+<rect x="682" y="235" width="44" height="19" rx="6" fill="#202839" stroke="#263045" stroke-width="1"/>
+<text x="704" y="248.5" fill="#7b8396" font-family="ui-monospace,Consolas,'Courier New',monospace" font-size="10.5" font-weight="400" text-anchor="middle">p.2</text>
+<text x="760" y="252" fill="#3fb950" font-family="'Microsoft YaHei','Segoe UI',ui-sans-serif,system-ui,sans-serif" font-size="12.5" font-weight="400" text-anchor="start">✓ body present</text>
+<text x="884" y="252" fill="#7b8396" font-family="ui-monospace,Consolas,'Courier New',monospace" font-size="11" font-weight="400" text-anchor="start">→</text>
+<text x="900" y="252" fill="#7b8396" font-family="ui-monospace,Consolas,'Courier New',monospace" font-size="11" font-weight="400" text-anchor="start">no entry</text>
+<line x1="64" y1="315" x2="1036" y2="315" stroke="#263045" stroke-width="1"/>
+<rect x="64" y="285" width="35" height="19" rx="6" fill="#242d42"/>
+<text x="81.5" y="297.5" fill="#8496f5" font-family="ui-monospace,Consolas,'Courier New',monospace" font-size="10.5" font-weight="700" text-anchor="middle">7.3</text>
+<text x="110" y="301" fill="#f0f3f9" font-family="'Microsoft YaHei','Segoe UI',ui-sans-serif,system-ui,sans-serif" font-size="14" font-weight="700" text-anchor="start">响应启动</text>
+<circle cx="350" cy="294" r="11" fill="#242d42"/>
+<text x="350" y="298" fill="#8496f5" font-family="ui-monospace,Consolas,'Courier New',monospace" font-size="12" font-weight="700" text-anchor="middle">1</text>
+<text x="432" y="301" fill="#a8b1c4" font-family="'Microsoft YaHei','Segoe UI',ui-sans-serif,system-ui,sans-serif" font-size="13.5" font-weight="400" text-anchor="start">三、响应启动</text>
+<rect x="682" y="284" width="44" height="19" rx="6" fill="#202839" stroke="#263045" stroke-width="1"/>
+<text x="704" y="297.5" fill="#7b8396" font-family="ui-monospace,Consolas,'Courier New',monospace" font-size="10.5" font-weight="400" text-anchor="middle">p.3</text>
+<text x="760" y="301" fill="#d9a441" font-family="'Microsoft YaHei','Segoe UI',ui-sans-serif,system-ui,sans-serif" font-size="12.5" font-weight="400" text-anchor="start">⚠ heading only</text>
+<text x="884" y="301" fill="#7b8396" font-family="ui-monospace,Consolas,'Courier New',monospace" font-size="11" font-weight="400" text-anchor="start">→</text>
+<text x="900" y="301" fill="#d9a441" font-family="ui-monospace,Consolas,'Courier New',monospace" font-size="11" font-weight="400" text-anchor="start">issues[] · p.3</text>
+<rect x="56" y="323" width="1008" height="41" rx="10" fill="#202839"/>
+<line x1="64" y1="364" x2="1036" y2="364" stroke="#263045" stroke-width="1"/>
+<rect x="64" y="334" width="35" height="19" rx="6" fill="#242d42"/>
+<text x="81.5" y="346.5" fill="#8496f5" font-family="ui-monospace,Consolas,'Courier New',monospace" font-size="10.5" font-weight="700" text-anchor="middle">7.4</text>
+<text x="110" y="350" fill="#f0f3f9" font-family="'Microsoft YaHei','Segoe UI',ui-sans-serif,system-ui,sans-serif" font-size="14" font-weight="700" text-anchor="start">处置措施</text>
+<circle cx="350" cy="343" r="11" fill="none" stroke="#7b8396" stroke-width="1.4"/>
+<text x="350" y="347" fill="#7b8396" font-family="ui-monospace,Consolas,'Courier New',monospace" font-size="11" font-weight="400" text-anchor="middle">—</text>
+<text x="432" y="350" fill="#7b8396" font-family="'Microsoft YaHei','Segoe UI',ui-sans-serif,system-ui,sans-serif" font-size="12.5" font-weight="400" text-anchor="start">— no heading</text>
+<text x="760" y="350" fill="#d9a441" font-family="'Microsoft YaHei','Segoe UI',ui-sans-serif,system-ui,sans-serif" font-size="12.5" font-weight="400" text-anchor="start">✕ not found</text>
+<text x="884" y="350" fill="#7b8396" font-family="ui-monospace,Consolas,'Courier New',monospace" font-size="11" font-weight="400" text-anchor="start">→</text>
+<text x="900" y="350" fill="#d9a441" font-family="ui-monospace,Consolas,'Courier New',monospace" font-size="11" font-weight="400" text-anchor="start">issues[] · {}</text>
+<rect x="64" y="376" width="206" height="24" rx="8" fill="#202839" stroke="#263045" stroke-width="1"/>
+<text x="76" y="392" fill="#a8b1c4" font-family="ui-monospace,Consolas,'Courier New',monospace" font-size="11" font-weight="400" text-anchor="start">1 · normalized equality</text>
+<line x1="276" y1="388" x2="288" y2="388" stroke="#7b8396" stroke-width="1.2"/>
+<path d="M282 383.5L288 388L282 392.5" fill="none" stroke="#7b8396" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="290" y="376" width="206" height="24" rx="8" fill="#202839" stroke="#263045" stroke-width="1"/>
+<text x="302" y="392" fill="#a8b1c4" font-family="ui-monospace,Consolas,'Courier New',monospace" font-size="11" font-weight="400" text-anchor="start">2 · containment</text>
+<line x1="502" y1="388" x2="514" y2="388" stroke="#7b8396" stroke-width="1.2"/>
+<path d="M508 383.5L514 388L508 392.5" fill="none" stroke="#7b8396" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="516" y="376" width="206" height="24" rx="8" fill="#202839" stroke="#263045" stroke-width="1"/>
+<text x="528" y="392" fill="#a8b1c4" font-family="ui-monospace,Consolas,'Courier New',monospace" font-size="11" font-weight="400" text-anchor="start">3 · edit distance ≤ 2</text>
+<text x="742" y="392" fill="#7b8396" font-family="ui-monospace,Consolas,'Courier New',monospace" font-size="10.5" font-weight="400" text-anchor="start">一、 / 1.1 / **…** stripped before comparing</text>
+<text x="64" y="428" fill="#8496f5" font-family="ui-monospace,Consolas,'Courier New',monospace" font-size="11" font-weight="700" text-anchor="start" letter-spacing="1.2">CROSS-CUTTING</text>
+<text x="64" y="446" fill="#7b8396" font-family="ui-monospace,Consolas,'Courier New',monospace" font-size="10.5" font-weight="400" text-anchor="start">same pass, same material</text>
+<rect x="252" y="412" width="77.24" height="22" rx="11" fill="#1b2231" stroke="#263045" stroke-width="1"/>
+<text x="261" y="427" fill="#f0f3f9" font-family="ui-monospace,Consolas,'Courier New',monospace" font-size="11" font-weight="700" text-anchor="start">EP-002</text>
+<text x="320.24" y="427" fill="#7b8396" font-family="ui-monospace,Consolas,'Courier New',monospace" font-size="11" font-weight="400" text-anchor="end">n/a</text>
+<rect x="335.24" y="412" width="77.24" height="22" rx="11" fill="#1b2231" stroke="#263045" stroke-width="1"/>
+<text x="344.24" y="427" fill="#f0f3f9" font-family="ui-monospace,Consolas,'Courier New',monospace" font-size="11" font-weight="700" text-anchor="start">EP-003</text>
+<text x="403.48" y="427" fill="#7b8396" font-family="ui-monospace,Consolas,'Courier New',monospace" font-size="11" font-weight="400" text-anchor="end">n/a</text>
+<rect x="418.48" y="412" width="89.96" height="22" rx="11" fill="#1b2231" stroke="#263045" stroke-width="1"/>
+<text x="427.48" y="427" fill="#f0f3f9" font-family="ui-monospace,Consolas,'Courier New',monospace" font-size="11" font-weight="700" text-anchor="start">EP-004</text>
+<text x="499.44" y="427" fill="#3fb950" font-family="ui-monospace,Consolas,'Courier New',monospace" font-size="11" font-weight="400" text-anchor="end">clean</text>
+<rect x="514.44" y="412" width="89.96" height="22" rx="11" fill="#1b2231" stroke="#263045" stroke-width="1"/>
+<text x="523.44" y="427" fill="#f0f3f9" font-family="ui-monospace,Consolas,'Courier New',monospace" font-size="11" font-weight="700" text-anchor="start">EP-005</text>
+<text x="595.4" y="427" fill="#3fb950" font-family="ui-monospace,Consolas,'Courier New',monospace" font-size="11" font-weight="400" text-anchor="end">clean</text>
+<rect x="610.4" y="412" width="115.4" height="22" rx="11" fill="#1b2231" stroke="#263045" stroke-width="1"/>
+<text x="619.4" y="427" fill="#f0f3f9" font-family="ui-monospace,Consolas,'Courier New',monospace" font-size="11" font-weight="700" text-anchor="start">EP-006</text>
+<text x="716.8" y="427" fill="#3fb950" font-family="ui-monospace,Consolas,'Courier New',monospace" font-size="11" font-weight="400" text-anchor="end">3/3 pages</text>
+<rect x="731.8" y="412" width="89.96" height="22" rx="11" fill="#1b2231" stroke="#263045" stroke-width="1"/>
+<text x="740.8" y="427" fill="#f0f3f9" font-family="ui-monospace,Consolas,'Courier New',monospace" font-size="11" font-weight="700" text-anchor="start">EP-007</text>
+<text x="812.76" y="427" fill="#3fb950" font-family="ui-monospace,Consolas,'Courier New',monospace" font-size="11" font-weight="400" text-anchor="end">clean</text>
+<rect x="827.76" y="412" width="77.24" height="22" rx="11" fill="#1b2231" stroke="#263045" stroke-width="1"/>
+<text x="836.76" y="427" fill="#f0f3f9" font-family="ui-monospace,Consolas,'Courier New',monospace" font-size="11" font-weight="700" text-anchor="start">EP-008</text>
+<text x="896" y="427" fill="#7b8396" font-family="ui-monospace,Consolas,'Courier New',monospace" font-size="11" font-weight="400" text-anchor="end">off</text>
+<rect x="911" y="412" width="77.24" height="22" rx="11" fill="#1b2231" stroke="#263045" stroke-width="1"/>
+<text x="920" y="427" fill="#f0f3f9" font-family="ui-monospace,Consolas,'Courier New',monospace" font-size="11" font-weight="700" text-anchor="start">EP-009</text>
+<text x="979.24" y="427" fill="#7b8396" font-family="ui-monospace,Consolas,'Courier New',monospace" font-size="11" font-weight="400" text-anchor="end">off</text>
+<text x="252" y="446" fill="#7b8396" font-family="ui-monospace,Consolas,'Courier New',monospace" font-size="10.5" font-weight="400" text-anchor="start">n/a not applicable · clean ran, no difference · off not configured</text>
+<path d="M550 470V486" fill="none" stroke="#7b8396" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M550 486H235" fill="none" stroke="#d9a441" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M550 486H755" fill="none" stroke="#7b8396" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+<line x1="235" y1="486" x2="235" y2="498" stroke="#d9a441" stroke-width="1.6"/>
+<path d="M230.5 492L235 498L239.5 492" fill="none" stroke="#d9a441" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+<line x1="755" y1="486" x2="755" y2="498" stroke="#7b8396" stroke-width="1.6"/>
+<path d="M750.5 492L755 498L759.5 492" fill="none" stroke="#7b8396" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="40" y="498" width="390" height="114" rx="16" fill="#1b2231" stroke="#2e374b" stroke-width="1.2" filter="url(#soft)"/>
+<text x="56" y="520" fill="#f0f3f9" font-family="ui-monospace,Consolas,'Courier New',monospace" font-size="13.5" font-weight="700" text-anchor="start">issues[]</text>
+<text x="129.84" y="520" fill="#8496f5" font-family="ui-monospace,Consolas,'Courier New',monospace" font-size="13.5" font-weight="700" text-anchor="start">2</text>
+<rect x="348" y="508" width="66" height="22" rx="11" fill="#2a2216"/>
+<text x="381" y="523" fill="#d9a441" font-family="ui-monospace,Consolas,'Courier New',monospace" font-size="11" font-weight="400" text-anchor="middle">warn</text>
+<text x="56" y="544" fill="#d9a441" font-family="ui-monospace,Consolas,'Courier New',monospace" font-size="11.5" font-weight="400" text-anchor="start">EP-001 · warn · p.3</text>
+<text x="56" y="560" fill="#a8b1c4" font-family="'Microsoft YaHei','Segoe UI',ui-sans-serif,system-ui,sans-serif" font-size="12.5" font-weight="400" text-anchor="start">found: 「响应启动」heading, no body beneath</text>
+<text x="56" y="578" fill="#d9a441" font-family="ui-monospace,Consolas,'Courier New',monospace" font-size="11.5" font-weight="400" text-anchor="start">EP-001 · warn · {}</text>
+<text x="56" y="594" fill="#a8b1c4" font-family="'Microsoft YaHei','Segoe UI',ui-sans-serif,system-ui,sans-serif" font-size="12.5" font-weight="400" text-anchor="start">found: 「处置措施」not in the material</text>
+<rect x="446" y="498" width="614" height="114" rx="16" fill="#1b2231" stroke="#2e374b" stroke-width="1.2" filter="url(#soft)"/>
+<text x="462" y="520" fill="#f0f3f9" font-family="ui-monospace,Consolas,'Courier New',monospace" font-size="13.5" font-weight="700" text-anchor="start">skipped[]</text>
+<text x="544.32" y="520" fill="#8496f5" font-family="ui-monospace,Consolas,'Courier New',monospace" font-size="13.5" font-weight="700" text-anchor="start">8</text>
+<text x="1044" y="523" fill="#7b8396" font-family="ui-monospace,Consolas,'Courier New',monospace" font-size="10.5" font-weight="400" text-anchor="end">every entry states its reason</text>
+<text x="462" y="542" fill="#a8b1c4" font-family="ui-monospace,Consolas,'Courier New',monospace" font-size="12" font-weight="400" text-anchor="start">EP-002 / EP-003 · not applicable (planType: special)</text>
+<text x="462" y="557.5" fill="#a8b1c4" font-family="ui-monospace,Consolas,'Courier New',monospace" font-size="12" font-weight="400" text-anchor="start">EP-004 / EP-005 / EP-007 · ran, no difference found</text>
+<text x="462" y="573" fill="#a8b1c4" font-family="ui-monospace,Consolas,'Courier New',monospace" font-size="12" font-weight="400" text-anchor="start">EP-006 · 3 / 3 sections carry pages (minPageRatio 0.5)</text>
+<text x="462" y="588.5" fill="#a8b1c4" font-family="ui-monospace,Consolas,'Courier New',monospace" font-size="12" font-weight="400" text-anchor="start">EP-008 · versionPatterns empty → not executed</text>
+<text x="462" y="604" fill="#a8b1c4" font-family="ui-monospace,Consolas,'Courier New',monospace" font-size="12" font-weight="400" text-anchor="start">EP-009 · requireAttachments=false → off by default</text>
+<text x="40" y="638" fill="#7b8396" font-family="ui-monospace,Consolas,'Courier New',monospace" font-size="11" font-weight="400" text-anchor="start">a rule lands on exactly one side · the report lists differences, never a verdict · GB/T 29639-2020</text>
+</svg>
