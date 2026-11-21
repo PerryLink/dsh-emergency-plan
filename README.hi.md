@@ -43,6 +43,11 @@ dsh plugin --profile <name> add dsh-emergency-plan
   <img src="docs/assets/dsh-emergency-plan-flow-v5-light.svg" width="100%" alt="dsh-emergency-plan संरचना: EP-001 तत्व-सूची सामग्री के अनुच्छेद-वृक्ष के सामने पंक्ति-दर-पंक्ति; शीर्षक मिलान तीन चरणों में (समानता, समावेश, संपादन दूरी); हर पंक्ति का निष्कर्ष issues[] और skipped[] में बँटता है; EP-002 से EP-009 उसी पास में अपनी स्थिति बताते हैं">
 </picture>
 
+![dsh-emergency-plan का असली टर्मिनल रन](docs/assets/dsh-emergency-plan-demo.gif)
+
+*इस रिपॉज़िटरी में दर्ज असली रन का एनिमेटेड रीप्ले।*
+
+
 ## तीन चरणों में शुरुआत
 
 1. **इंस्टॉल** (कोई एक चैनल चुनें):

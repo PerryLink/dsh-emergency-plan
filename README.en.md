@@ -43,6 +43,11 @@ dsh plugin --profile <name> add dsh-emergency-plan
   <img src="docs/assets/dsh-emergency-plan-flow-v5-light.svg" width="100%" alt="dsh-emergency-plan structure: the EP-001 element list laid row by row against the material's section tree; headings are matched by normalized equality, containment and edit distance; each row ends in a disposition, and the bench forks into issues[] and skipped[]; the cross-cutting checks EP-002 to EP-009 report their state in the same pass">
 </picture>
 
+![dsh-emergency-plan: real terminal run](docs/assets/dsh-emergency-plan-demo.gif)
+
+*Animated replay of a real run recorded in this repository.*
+
+
 ## Three-step setup
 
 1. **Install** (pick one channel):

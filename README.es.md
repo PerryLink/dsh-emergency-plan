@@ -43,6 +43,11 @@ dsh plugin --profile <name> add dsh-emergency-plan
   <img src="docs/assets/dsh-emergency-plan-flow-v5-light.svg" width="100%" alt="Estructura de dsh-emergency-plan: la lista de elementos EP-001 frente al árbol de secciones del material, con el emparejamiento en tres pasos (igualdad, contención, distancia de edición); cada fila termina en una disposición y el banco se bifurca en issues[] y skipped[]; las comprobaciones EP-002 a EP-009 indican su estado en la misma pasada">
 </picture>
 
+![dsh-emergency-plan: ejecución real de terminal](docs/assets/dsh-emergency-plan-demo.gif)
+
+*Repetición animada de una ejecución real registrada en este repositorio.*
+
+
 ## Instalación en tres pasos
 
 1. **Instalar** (elige un canal):
