@@ -7,6 +7,8 @@
 
 # dsh-emergency-plan
 
+Current version `0.2.13`.
+
 **Check an emergency plan's element completeness clause by clause, and locate every difference by page or line — the judgement stays with the reviewer.**
 
 A DeepSeek Harness checker for safety managers and plan writers: it reads one plan's section tree, headings, page numbers and body text, applies a versioned rule pack for the plan type the material declares, and reports what is missing, what is empty, and where it sits.

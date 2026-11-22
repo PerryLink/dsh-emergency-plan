@@ -1,6 +1,6 @@
 {
   "meta": {
     "title": "Emergency plan element check",
-    "description": "应急预案要素齐备性与条款级页码定位（依据 GB/T 29639-2020 等公开文件，仅提示差异，不作出定性结论）"
+    "description": "Check an emergency plan's element completeness clause by clause, and locate every difference by page or line — the judgement stays with the reviewer."
   }
 }
