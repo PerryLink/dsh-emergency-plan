@@ -11,6 +11,8 @@
 
 A DeepSeek Harness checker for safety managers and plan writers: it reads one plan's section tree, headings, page numbers and body text, applies a versioned rule pack for the plan type the material declares, and reports what is missing, what is empty, and where it sits.
 
+Last verified on DeepSeek Harness `dsh-v0.2.3-alpha.1` (2026-11-22).
+
 [Install](#three-step-setup) · [Configuration](#configuration) · [FAQ](#faq) · [简体中文](README.md) · [English](README.en.md) · [Español](README.es.md) · [Português](README.pt.md) · [हिन्दी](README.hi.md)
 
 [![License](https://img.shields.io/badge/license-Apache--2.0-3366CC?style=flat-square&labelColor=2B3245)](LICENSE)
@@ -46,7 +48,6 @@ dsh plugin --profile <name> add dsh-emergency-plan
 ![dsh-emergency-plan: real terminal run](docs/assets/dsh-emergency-plan-demo.gif)
 
 *Animated replay of a real run recorded in this repository.*
-
 
 ## Three-step setup
 

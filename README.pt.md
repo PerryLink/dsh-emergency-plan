@@ -11,6 +11,8 @@
 
 Um verificador do DeepSeek Harness para responsáveis de segurança e redatores de planos: lê a árvore de secções, os títulos, as páginas e o corpo de um plano, aplica um pacote de regras versionado ao tipo de plano declarado e mostra o que falta, o que está vazio e onde está.
 
+Última verificação: DeepSeek Harness `dsh-v0.2.3-alpha.1` (2026-11-22).
+
 [Instalação](#instalação-em-três-passos) · [Configuração](#configuração) · [FAQ](#faq) · [简体中文](README.md) · [English](README.en.md) · [Español](README.es.md) · [Português](README.pt.md) · [हिन्दी](README.hi.md)
 
 [![License](https://img.shields.io/badge/license-Apache--2.0-3366CC?style=flat-square&labelColor=2B3245)](LICENSE)
@@ -46,7 +48,6 @@ dsh plugin --profile <name> add dsh-emergency-plan
 ![dsh-emergency-plan: execução real de terminal](docs/assets/dsh-emergency-plan-demo.gif)
 
 *Repetição animada de uma execução real registrada neste repositório.*
-
 
 ## Instalação em três passos
 
